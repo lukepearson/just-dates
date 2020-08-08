@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "esnext", "dom"],
+    "sourceMap": true,
+    "allowJs": false,
+    "moduleResolution": "node",
+    "rootDirs": ["src"],
+    "baseUrl": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["mocha", "node"],
+    "declaration": true,
+    "declarationDir": "./lib",
+    "strict": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "ignoreDiagnostics": [7005]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "src/**/*.test.ts"]
+}
