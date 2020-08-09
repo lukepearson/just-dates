@@ -408,6 +408,6 @@ describe('isValid', function() {
   });
 
   it('throws an error there is no date object', function() {
-    throws(() => isValid(null as any), Error('Invalid date object'));
+    throws(() => isValid(null as any), Error('Missing argument "dateObject"'));
   });
 });

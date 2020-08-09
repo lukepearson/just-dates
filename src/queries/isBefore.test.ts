@@ -3,7 +3,6 @@ import { isBefore } from './isBefore';
 import { DateObject } from 'dateObject';
 
 describe('isBefore', function() {
-
   it('returns false if the dates are equal', function() {
     const before: DateObject = { year: 2020, month: 1, day: 6 };
     const after: DateObject = { year: 2020, month: 1, day: 6 };

@@ -2,7 +2,7 @@ import { subMonths } from './subMonths';
 import { DateObject } from 'dateObject';
 import { deepStrictEqual as eq } from 'assert';
 
-describe('SubMonths', function() {
+describe('subMonths', function() {
   it('subtracts months', function() {
     const date: DateObject = { year: 2020, month: 1, day: 1 };
     const result = subMonths(date, 1);

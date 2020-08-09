@@ -2,7 +2,7 @@ import { DateObject, DateInterval } from 'dateObject';
 import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
 
-export const add = (a: DateObject, b: DateInterval): DateObject => {
+export const sub = (a: DateObject, b: DateInterval): DateObject => {
   checkArgs(a, 'a');
   checkArgs(b, 'b');
   const weekDays = (b.week || 0) * 7;
@@ -13,8 +13,8 @@ export const add = (a: DateObject, b: DateInterval): DateObject => {
     day: days,
   };
   return reconcile({
-    year: a.year + delta.year,
-    month: a.month + delta.month,
-    day: a.day + delta.day,
+    year: a.year - delta.year,
+    month: a.month - delta.month,
+    day: a.day - delta.day,
   });
 };

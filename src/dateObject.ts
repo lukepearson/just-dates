@@ -21,5 +21,6 @@ export interface DateInterval {
   year?: number;
 }
 
+export type YearMonth = Year & Month;
 export type DateObject = Day & Month & Year;
 export type DatePart = Day | Month | Year;

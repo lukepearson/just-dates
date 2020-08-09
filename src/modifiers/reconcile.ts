@@ -25,15 +25,15 @@ const toNumbers = ({ year, month, day }: DateObject): DateObject => {
 
 const sortYearMonthDay = (dateObject: DateObject) => {
   let { year, month, day } = toNumbers(dateObject);
-  let daysInMonth = getDaysInMonth(month, year);
+  let daysInMonth = getDaysInMonth({ month, year });
   if (day > daysInMonth) {
     month++;
     day -= daysInMonth;
-    daysInMonth = getDaysInMonth(month, year);
+    daysInMonth = getDaysInMonth({ month, year });
   }
   if (day <= 0) {
     month--;
-    daysInMonth = getDaysInMonth(month, year);
+    daysInMonth = getDaysInMonth({ month, year });
     day += daysInMonth;
   }
   if (month > 12) {
@@ -44,8 +44,8 @@ const sortYearMonthDay = (dateObject: DateObject) => {
     year--;
     month += 12;
   }
-  year = Math.max(1, Math.min(9999, year));
-  daysInMonth = getDaysInMonth(month, year);
+  year = Math.max(1, year);
+  daysInMonth = getDaysInMonth({ month, year });
   if (day > daysInMonth) {
     month++;
     day -= daysInMonth;

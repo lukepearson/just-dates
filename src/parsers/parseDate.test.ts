@@ -1,7 +1,7 @@
 import { deepStrictEqual as eq, throws } from 'assert';
 import { parseDate, DateFormat } from './parseDate';
 
-describe('ParseDate', function() {
+describe('parseDate', function() {
   const testCases = [
     {
       input: '2015-01-02',

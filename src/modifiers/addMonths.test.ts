@@ -2,7 +2,7 @@ import { addMonths } from './addMonths';
 import { DateObject } from 'dateObject';
 import { deepStrictEqual as eq } from 'assert';
 
-describe('AddMonths', function() {
+describe('addMonths', function() {
   it('adds months to the date', function() {
     const date: DateObject = { year: 2020, month: 2, day: 27 };
     const result = addMonths(date, 5);

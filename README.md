@@ -34,20 +34,19 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 
 ## Functions
 
-* add
+* add ☑️
 * addBusinessDays
-* addDays
+* addDays ☑️
 * addISOWeekYears
-* addMonths
+* addMonths ☑️
 * addQuarters
 * addWeeks
-* addYears
+* addYears ☑️
 * areIntervalsOverlapping
 * closestIndexTo
 * closestTo
 * compareAsc
 * compareDesc
-* constants
 * differenceInBusinessDays
 * differenceInCalendarDays
 * differenceInCalendarISOWeekYears
@@ -99,9 +98,9 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * getWeekYear
 * getWeeksInMonth
 * intervalToDuration
-* isAfter
-* isBefore
-* isEqual
+* isAfter ☑️
+* isBefore ☑️
+* isEqual ☑️
 * isExists
 * isFirstDayOfMonth
 * isFriday
@@ -109,8 +108,8 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * isLeapYear
 * isMatch
 * isMonday
+* isNumberLeapYear
 * isSameDay
-* isSameHour
 * isSameISOWeek
 * isSameISOWeekYear
 * isSameMonth
@@ -121,7 +120,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * isSunday
 * isThursday
 * isTuesday
-* isValid
+* isValid ☑️
 * isWednesday
 * isWeekend
 * isWithinInterval
@@ -160,9 +159,22 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * startOfYesterday
 * sub
 * subBusinessDays
-* subDays
+* subDays ☑️
 * subISOWeekYears
-* subMonths
+* subMonths ☑️
 * subQuarters
 * subWeeks
-* subYears
+* subYears ☑️
+
+
+## Generators?
+generateFullYear
+generateFullMonth
+generateRange
+etc..
+
+## Uses
+Games where you want to track dates but not necessarily times
+booking systems -> select date -> fetch times from API -> select time separately
+
+

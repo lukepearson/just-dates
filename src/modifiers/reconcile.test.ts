@@ -45,7 +45,7 @@ describe('reconcile', function() {
 
   it('can handle large numbers of days', function() {
     const input = { day: 8000000, month: 22, year: 1 };
-    const expected = { day: 30, month: 11, year: 9999 };
+    const expected = { day: 2, month: 1, year: 21906 };
     eq(reconcile(input), expected);
   });
 
