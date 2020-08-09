@@ -9,7 +9,22 @@ import { isValid } from '../queries/isValid';
  * @param dateObject
  */
 export const reconcile = (dateObject: DateObject): DateObject => {
-  let { year, month, day } = dateObject;
+  let sortedObject = sortYearMonthDay(dateObject);
+  const { year, month, day } = sortedObject;
+  if (isNaN(year) || isNaN(month) || isNaN(day)) return dateObject;
+
+  while (!isValid(sortedObject)) {
+    sortedObject = sortYearMonthDay(sortedObject);
+  }
+  return sortedObject;
+};
+
+const toNumbers = ({ year, month, day }: DateObject): DateObject => {
+  return { year: Number(year), month: Number(month), day: Number(day) };
+};
+
+const sortYearMonthDay = (dateObject: DateObject) => {
+  let { year, month, day } = toNumbers(dateObject);
   let daysInMonth = getDaysInMonth(month, year);
   if (day > daysInMonth) {
     month++;
@@ -34,10 +49,6 @@ export const reconcile = (dateObject: DateObject): DateObject => {
   if (day > daysInMonth) {
     month++;
     day -= daysInMonth;
-  }
-  if (!isValid({ year, month, day })) {
-    if (isNaN(day)) return { year, month, day };
-    return reconcile({ year, month, day });
   }
   return { year, month, day };
 };

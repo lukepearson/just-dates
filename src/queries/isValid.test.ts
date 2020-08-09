@@ -1,4 +1,4 @@
-import { deepEqual as deepEq, equal as eq } from 'assert';
+import { deepEqual as deepEq, equal as eq, throws } from 'assert';
 import { isValid } from './isValid';
 
 describe('isValid', function() {
@@ -401,5 +401,13 @@ describe('isValid', function() {
 
   it('returns false if the day is out of range in a non-leap year', function() {
     eq(isValid({ year: 1999, month: 2, day: 29 }), false);
+  });
+
+  it('returns false if the date is below 0-1-1', function() {
+    eq(isValid({ year: 0, month: 0, day: 0 }), false);
+  });
+
+  it('throws an error there is no date object', function() {
+    throws(() => isValid(null as any), Error('Invalid date object'));
   });
 });

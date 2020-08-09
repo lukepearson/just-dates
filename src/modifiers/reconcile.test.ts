@@ -1,6 +1,6 @@
 import { DateObject } from 'dateObject';
 import { addDays } from './addDays';
-import { deepEqual as eq } from 'assert';
+import { deepStrictEqual as eq } from 'assert';
 import { reconcile } from './reconcile';
 
 describe('reconcile', function() {
@@ -17,6 +17,7 @@ describe('reconcile', function() {
   });
 
   it('increments the year if there are more than 365 days', function() {
+    this.timeout(2000);
     [
       { input: 10, expected: { day: 7, month: 1, year: 2002 } },
       { input: 375, expected: { day: 7, month: 1, year: 2003 } },
@@ -40,5 +41,17 @@ describe('reconcile', function() {
     });
 
     eq(reconcile({ day: 1, month: 0, year: 2001 }), { day: 1, month: 12, year: 2000 });
+  });
+
+  it('can handle large numbers of days', function() {
+    const input = { day: 8000000, month: 22, year: 1 };
+    const expected = { day: 30, month: 11, year: 9999 };
+    eq(reconcile(input), expected);
+  });
+
+  it('returns the original date object if the input is invalid', function() {
+    const input = { day: 'fork handles', month: 62, year: 1 } as any;
+    const expected = { day: 'fork handles', month: 62, year: 1 };
+    eq(reconcile(input), expected);
   });
 });

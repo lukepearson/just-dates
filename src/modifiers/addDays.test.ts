@@ -1,6 +1,6 @@
 import { addDays } from './addDays';
 import { DateObject } from 'dateObject';
-import { deepEqual as eq } from 'assert';
+import { deepStrictEqual as eq } from 'assert';
 
 describe('AddDays', function() {
   it('adds days to the date', function() {
