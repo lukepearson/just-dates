@@ -35,7 +35,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 ## Functions
 
 * add ☑️
-* addBusinessDays
+* addWeekDays
 * addDays ☑️
 * addISOWeekYears
 * addMonths ☑️
@@ -47,7 +47,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * closestTo
 * compareAsc
 * compareDesc
-* differenceInBusinessDays
+* differenceInWeekDays
 * differenceInCalendarDays
 * differenceInCalendarISOWeekYears
 * differenceInCalendarISOWeeks
@@ -158,7 +158,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * startOfYear
 * startOfYesterday
 * sub
-* subBusinessDays
+* subWeekDays
 * subDays ☑️
 * subISOWeekYears
 * subMonths ☑️
