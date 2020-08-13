@@ -1,5 +1,5 @@
 import { sub } from './sub';
-import { DateObject, DateInterval } from 'dateObject';
+import { DateObject, DateInterval } from '../dateObject';
 import { deepStrictEqual as eq, throws } from 'assert';
 
 describe('sub', function() {

@@ -1,5 +1,5 @@
 import { subYears } from './subYears';
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { deepStrictEqual as eq } from 'assert';
 
 describe('subYears', function() {

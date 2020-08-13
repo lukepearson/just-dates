@@ -1,4 +1,4 @@
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { addDays } from './addDays';
 import { deepStrictEqual as eq } from 'assert';
 import { reconcile } from './reconcile';

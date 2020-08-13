@@ -1,5 +1,5 @@
 import { add } from './add';
-import { DateObject, DateInterval } from 'dateObject';
+import { DateObject, DateInterval } from '../dateObject';
 import { deepStrictEqual as eq, throws } from 'assert';
 
 describe('add', function() {

@@ -1,5 +1,5 @@
 import { addMonths } from './addMonths';
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { deepStrictEqual as eq } from 'assert';
 
 describe('addMonths', function() {
