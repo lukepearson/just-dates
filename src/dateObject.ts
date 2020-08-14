@@ -14,7 +14,7 @@ export interface Year {
   year: number;
 }
 
-export interface DateInterval {
+export interface Duration {
   day?: number;
   week?: number;
   month?: number;

@@ -1,6 +1,9 @@
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { addDays } from './addDays';
+import { checkArgs } from '../internal/checkArgs';
 
-export const subDays = (dateObject: DateObject, days: number): DateObject => {
-  return addDays(dateObject, 0 - days);
+export const subDays = (date: DateObject, days: number): DateObject => {
+  checkArgs(date, 'date');
+  checkArgs(days, 'days');
+  return addDays(date, 0 - days);
 };

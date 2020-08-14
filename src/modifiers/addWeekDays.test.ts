@@ -43,18 +43,4 @@ describe('addWeekDays', function() {
     const expected = { year: 2020, month: 3, day: 27 };
     eq(result, expected);
   });
-
-  it('returns the original date object if days is zero', function() {
-    const date: DateObject = { year: 2020, month: 1, day: 25 };
-    const result = addWeekDays(date, 0);
-    const expected = { year: 2020, month: 1, day: 25 };
-    eq(result, expected);
-  });
-
-  it('defaults days to zero', function() {
-    const date: DateObject = { year: 2020, month: 1, day: 25 };
-    const result = addWeekDays(date);
-    const expected = { year: 2020, month: 1, day: 25 };
-    eq(result, expected);
-  });
 });

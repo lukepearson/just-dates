@@ -1,9 +1,9 @@
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
 
-export const addYears = (dateObject: DateObject, years: number): DateObject => {
-  checkArgs(dateObject, 'dateObject');
-  const { year, month, day } = dateObject;
+export const addYears = (date: DateObject, years: number): DateObject => {
+  checkArgs(date, 'date');
+  const { year, month, day } = date;
   return reconcile({ year: year + years, month, day });
 };

@@ -1,20 +1,20 @@
-import { DateObject, DateInterval } from 'dateObject';
+import { DateObject, Duration } from 'dateObject';
 import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
 
-export const sub = (a: DateObject, b: DateInterval): DateObject => {
-  checkArgs(a, 'a');
-  checkArgs(b, 'b');
-  const weekDays = (b.week || 0) * 7;
-  const days = (b.day || 0) + weekDays;
+export const sub = (date: DateObject, duration: Duration): DateObject => {
+  checkArgs(date, 'date');
+  checkArgs(duration, 'duration');
+  const weekDays = (duration.week || 0) * 7;
+  const days = (duration.day || 0) + weekDays;
   const delta = {
-    year: b.year || 0,
-    month: b.month || 0,
+    year: duration.year || 0,
+    month: duration.month || 0,
     day: days,
   };
   return reconcile({
-    year: a.year - delta.year,
-    month: a.month - delta.month,
-    day: a.day - delta.day,
+    year: date.year - delta.year,
+    month: date.month - delta.month,
+    day: date.day - delta.day,
   });
 };

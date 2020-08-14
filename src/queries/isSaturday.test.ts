@@ -11,4 +11,17 @@ describe('isSaturday', function() {
       eq(isSaturday(saturday), true);
     });
   });
+
+  [
+    { year: 1970, month: 1, day: 4 },
+    { year: 1970, month: 1, day: 5 },
+    { year: 1970, month: 1, day: 6 },
+    { year: 1970, month: 1, day: 7 },
+    { year: 1970, month: 1, day: 8 },
+    { year: 1970, month: 1, day: 9 },
+  ].forEach((saturday) => {
+    it(`returns false for ${format(saturday)}`, function() {
+      eq(isSaturday(saturday), false);
+    });
+  });
 });

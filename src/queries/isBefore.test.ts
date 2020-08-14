@@ -1,6 +1,6 @@
 import { equal as eq } from 'assert';
 import { isBefore } from './isBefore';
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 
 describe('isBefore', function() {
   it('returns false if the dates are equal', function() {

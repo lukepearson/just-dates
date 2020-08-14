@@ -1,4 +1,4 @@
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { reconcile } from '../modifiers/reconcile';
 
 /**

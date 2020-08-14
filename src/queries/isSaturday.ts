@@ -1,4 +1,4 @@
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { format } from '../formatters/format';
 import { checkArgs } from '../internal/checkArgs';
 

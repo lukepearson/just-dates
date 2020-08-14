@@ -1,6 +1,6 @@
 import { addYears } from './addYears';
 import { DateObject } from '../dateObject';
-import { deepStrictEqual as eq, throws } from 'assert';
+import { deepStrictEqual as eq } from 'assert';
 
 describe('addYears', function() {
   it('adds years to the date', function() {
@@ -15,9 +15,5 @@ describe('addYears', function() {
     const expected = { year: 2018, month: 2, day: 20 };
     const result = addYears(date, -2);
     eq(result, expected);
-  });
-
-  it('throws an error if dateObject is falsy', function() {
-    throws(() => addYears(null as any, 1), Error('Missing argument "dateObject"'));
   });
 });

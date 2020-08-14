@@ -1,4 +1,4 @@
-import { deepEqual as deepEq, equal as eq, throws } from 'assert';
+import { deepEqual as deepEq, equal as eq } from 'assert';
 import { isValid } from './isValid';
 
 describe('isValid', function() {
@@ -405,9 +405,5 @@ describe('isValid', function() {
 
   it('returns false if the date is below 0-1-1', function() {
     eq(isValid({ year: 0, month: 0, day: 0 }), false);
-  });
-
-  it('throws an error there is no date object', function() {
-    throws(() => isValid(null as any), Error('Missing argument "dateObject"'));
   });
 });

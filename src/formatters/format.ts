@@ -1,4 +1,4 @@
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { DateFormat } from '../parsers/parseDate';
 import { checkArgs } from '../internal/checkArgs';
 

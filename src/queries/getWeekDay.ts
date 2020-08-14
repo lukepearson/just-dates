@@ -1,4 +1,4 @@
-// import { DateObject } from 'dateObject';
+// import { DateObject } from '../dateObject';
 // import { getDifferenceInDays } from './getDifferenceInDays';
 
 // const sunday = { year: 1970, month: 1, day: 4};

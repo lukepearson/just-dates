@@ -1,4 +1,4 @@
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 
 export const isNumberLeapYear = (year: number): boolean =>
   (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;

@@ -1,4 +1,4 @@
-import { DateObject } from 'dateObject';
+import { DateObject } from '../dateObject';
 import { getDaysInMonth } from './getDaysInMonth';
 import { checkArgs } from '../internal/checkArgs';
 
