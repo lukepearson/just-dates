@@ -35,12 +35,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * addQuarters
 * addWeeks ☑️
 * addYears ☑ 
-* closestIndexTo
-* closestTo
-* compareAsc
-* compareDesc
 * differenceInWeekDays
-* differenceInCalendarDays
 * differenceInCalendarISOWeekYears
 * differenceInCalendarISOWeeks
 * differenceInCalendarMonths
@@ -165,6 +160,14 @@ generateFullYear
 generateFullMonth
 generateRange
 etc..
+
+## Todo
+
+* Add examples for each function
+* Add example project that uses the * library
+* Check package size is ok
+* Check performance is ok
+* Flow?
 
 ## Uses
 Games where you want to track dates but not necessarily times

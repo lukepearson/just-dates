@@ -1,14 +1,21 @@
 import { DateObject } from '../dateObject';
 import { isAfter } from './isAfter';
-import { isNumberLeapYear } from './isLeapYear';
-import { getDaysInMonth } from './getDaysInMonth';
+import { isNumberLeapYear } from '../queries/isLeapYear';
+import { getDaysInMonth } from '../queries/getDaysInMonth';
 import { checkArgs } from '../internal/checkArgs';
+import { reconcile } from '../modifiers/reconcile';
 
+/**
+ * Returns the number of days between two dates
+ * @example
+ * getDifferenceInDays({ year: 2020, month: 1, day: 1 }, { year: 2020, month: 1, day: 10 })
+ * // 9
+ */
 export const getDifferenceInDays = (a: DateObject, b: DateObject): number => {
   checkArgs(a, 'a');
   checkArgs(b, 'b');
-  const _a = isAfter(a, b) ? a : b;
-  const _b = isAfter(a, b) ? b : a;
+  const _a = isAfter(a, b) ? reconcile(a) : reconcile(b);
+  const _b = isAfter(a, b) ? reconcile(b) : reconcile(a);
   return Math.abs(getTotalDays(_a) - getTotalDays(_b));
 };
 
