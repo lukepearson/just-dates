@@ -145,7 +145,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * startOfWeekYear
 * startOfYear
 * startOfYesterday
-* sub
+* sub ☑️
 * subWeekDays
 * subDays ☑️
 * subISOWeekYears

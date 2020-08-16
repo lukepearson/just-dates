@@ -3,12 +3,11 @@ import { getDaysInMonth } from './getDaysInMonth';
 import { checkArgs } from '../internal/checkArgs';
 
 /**
- * Checks whether a date object is valid between 0-1-1 and ????-12-31?
- * @param dateObject
+ * Checks whether a date object is valid after 1-1-1
  */
-export const isValid = (dateObject: DateObject): boolean => {
-  checkArgs(dateObject, 'dateObject');
-  const { day, month, year } = dateObject;
+export const isValid = (date: DateObject): boolean => {
+  checkArgs(date, 'date');
+  const { day, month, year } = date;
   if (year < 1) return false;
   if (month > 12 || month < 1) return false;
   if (day > getDaysInMonth({ month, year }) || day < 1) return false;

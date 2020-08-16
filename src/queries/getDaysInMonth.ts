@@ -1,8 +1,10 @@
 import { isNumberLeapYear } from './isLeapYear';
-import { YearMonth } from 'dateObject';
+import { YearMonth, DateObject } from '../dateObject';
+import { checkArgs } from '../internal/checkArgs';
 
-export const getDaysInMonth = (yearMonth: YearMonth) => {
-  let { year, month } = yearMonth;
+export const getDaysInMonth = (date: YearMonth | DateObject) => {
+  checkArgs(date, 'date');
+  let { year, month } = date;
   while (month < 1) {
     month += 12;
     year--;

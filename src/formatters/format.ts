@@ -2,9 +2,9 @@ import { DateObject } from '../dateObject';
 import { DateFormat } from '../parsers/parseDate';
 import { checkArgs } from '../internal/checkArgs';
 
-export const format = (dateObject: DateObject, format: DateFormat = 'Y-M-D'): string => {
-  checkArgs(dateObject, 'dateObject');
-  const { year, month, day } = dateObject;
+export const format = (date: DateObject, format: DateFormat = 'Y-M-D'): string => {
+  checkArgs(date, 'date');
+  const { year, month, day } = date;
   const pad = (num: number) => String(num).padStart(2, '0');
   const separator = /([^ymd])/gi.exec(format);
   if (!separator) throw new Error(`Invalid date format "${format}"`);
