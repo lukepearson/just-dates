@@ -54,4 +54,10 @@ describe('reconcile', function() {
     const expected = { day: 'fork handles', month: 62, year: 1 };
     eq(reconcile(input), expected);
   });
+
+  it('returns the original date object if the input is NaN', function() {
+    const input = { day: NaN, month: 62, year: 1 } as any;
+    const expected = { day: NaN, month: 62, year: 1 };
+    eq(reconcile(input), expected);
+  });
 });

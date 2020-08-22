@@ -8,10 +8,10 @@ import { reconcile } from '../modifiers/reconcile';
 /**
  * Returns the number of days between two dates
  * @example
- * getDifferenceInDays({ year: 2020, month: 1, day: 1 }, { year: 2020, month: 1, day: 10 })
+ * diffDays({ year: 2020, month: 1, day: 1 }, { year: 2020, month: 1, day: 10 })
  * // 9
  */
-export const getDifferenceInDays = (a: DateObject, b: DateObject): number => {
+export const diffDays = (a: DateObject, b: DateObject): number => {
   checkArgs(a, 'a');
   checkArgs(b, 'b');
   const _a = isAfter(a, b) ? reconcile(a) : reconcile(b);

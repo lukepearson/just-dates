@@ -1,7 +1,7 @@
 import { DateObject } from '../dateObject';
 import { getDaysInMonth } from '../queries/getDaysInMonth';
 import { isValid } from '../queries/isValid';
-import { checkArgs } from 'internal/checkArgs';
+import { checkArgs } from '../internal/checkArgs';
 
 /**
  * Returns a valid date by sorting into the right denominations.

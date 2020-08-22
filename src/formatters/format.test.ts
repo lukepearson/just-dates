@@ -19,7 +19,7 @@ describe('format', function() {
   });
 
   it('throws an error if no date is passed in', function() {
-    throws(() => format(null as any), Error('Missing argument "dateObject"'));
+    throws(() => format(null as any), Error('Missing argument "date"'));
   });
 
   it('throws an error if no separator is recognised', function() {

@@ -32,7 +32,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * addWeekDays ☑️
 * addDays ☑️
 * addMonths ☑️
-* addQuarters
+* addQuarters ☑️
 * addWeeks ☑️
 * addYears ☑ 
 * differenceInWeekDays
@@ -162,9 +162,9 @@ generateRange
 etc..
 
 ## Todo
-
-* Add examples for each function
-* Add example project that uses the * library
+* Locales
+* Add examples for each function in jsdoc
+* Add example project
 * Check package size is ok
 * Check performance is ok
 * Flow?

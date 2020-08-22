@@ -1,6 +1,7 @@
 import { add } from './add';
 import { DateObject, Duration } from '../dateObject';
 import { deepStrictEqual as eq } from 'assert';
+import { format } from 'util';
 
 describe('add', function() {
   it('adds 2 dates', function() {
@@ -41,5 +42,27 @@ describe('add', function() {
     const result = add(date, date2);
     const expected = { year: 2060, month: 1, day: 1 };
     eq(result, expected);
+  });
+
+  [
+    {
+      input: { year: 50, month: 3, day: 30 },
+      input2: { day: 30 },
+      expected: { year: 50, month: 4, day: 29 },
+    },
+    {
+      input: { year: 1950, month: 5, day: 26 },
+      input2: { day: 26, week: 2 },
+      expected: { year: 1950, month: 7, day: 5 },
+    },
+    {
+      input: { year: 1950, month: 5, day: 26 },
+      input2: { month: 2, week: 2 },
+      expected: { year: 1950, month: 8, day: 9 },
+    },
+  ].forEach(({ input, input2, expected }) => {
+    it(`${format(input)} + ${format(input2)} = ${format(expected)}`, function() {
+      eq(add(input, input2), expected);
+    });
   });
 });
