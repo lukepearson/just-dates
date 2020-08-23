@@ -1,4 +1,4 @@
-import { deepEqual as eq } from 'assert';
+import { deepStrictEqual as eq } from 'assert';
 import { getStartOfWeekYear } from './getStartOfWeekYear';
 
 describe('getStartOfWeekYear', function() {
