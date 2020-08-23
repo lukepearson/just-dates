@@ -2,7 +2,9 @@
 
 ## Why?
 
-There are plenty of libraries dealing with datetimes, but sometimes you don't care about the time element. With just-dates you can parse/modify/query dates without having to convert them to datetimes
+There are plenty of libraries dealing with datetimes. With just-dates you can parse/modify/query dates as plain objects without having to convert them to datetimes.
+
+API inspired by [date-fns](https://date-fns.org/)
 
 ## Installation
 
@@ -26,75 +28,97 @@ const in20Days = addDays(dateObject, 20);
 console.log(`20 days from now is ${formatISO(in20Days))}`);
 ```
 
-## Functions
-
+## Modifiers
 * add ☑️
-* addWeekDays ☑️
 * addDays ☑️
 * addMonths ☑️
 * addQuarters ☑️
+* addWeekDays ☑️
 * addWeeks ☑️
-* addYears ☑ 
-* differenceInWeekDays
-* differenceInCalendarISOWeekYears
-* differenceInCalendarISOWeeks
-* differenceInCalendarMonths
-* differenceInCalendarQuarters
-* differenceInCalendarWeeks
-* differenceInCalendarYears
-* differenceInDays
-* differenceInISOWeekYears
-* differenceInMonths
-* differenceInQuarters
-* differenceInWeeks
-* differenceInYears
-* eachDayOfInterval
-* eachHourOfInterval
-* eachMonthOfInterval
-* eachQuarterOfInterval
-* eachWeekOfInterval
-* eachWeekendOfInterval
-* eachWeekendOfMonth
-* eachWeekendOfYear
-* eachYearOfInterval
-* endOfDay
-* endOfDecade
-* endOfISOWeek
-* endOfISOWeekYear
-* endOfMonth
-* endOfQuarter
-* endOfWeek
-* endOfYear
+* addYears ☑
+* set
+* setDay
+* setDayOfYear
+* setISODay
+* setISOWeek
+* setISOWeekYear
+* setQuarter
+* setWeek
+* setWeekYear
+* sub ☑️
+* subDays ☑️
+* subISOWeekYears
+* subMonths ☑️
+* subQuarters
+* subWeekDays
+* subWeeks
+* subYears ☑️
+
+## Comparators
+* diffCalendarISOWeeks
+* diffCalendarISOWeekYears
+* diffCalendarMonths
+* diffCalendarQuarters
+* diffCalendarWeeks
+* diffCalendarYears
+* diffDays
+* diffISOWeekYears
+* diffMonths
+* diffQuarters
+* diffWeekDays
+* diffWeeks ☑
+* diffYears
+
+## Generators
+* generateMonth
+* generateRange
+* generateWeek
+* generateYear
+
+## Formatters
 * format
 * formatDistance
 * formatDistanceStrict
 * formatDuration
 * formatRelative
+
+## Queries
 * getDayOfYear
 * getDaysInMonth
 * getDaysInYear
 * getDecade
+* getEndOfDecade
+* getEndOfISOWeek
+* getEndOfISOWeekYear
+* getEndOfMonth
+* getEndOfQuarter
+* getEndOfWeek
+* getEndOfYear
 * getISODay
 * getISOWeek
-* getISOWeekYear
 * getISOWeeksInYear
+* getISOWeekYear
 * getOverlappingDaysInIntervals
 * getQuarter
+* getStartOfDecade
+* getStartOfISOWeek
+* getStartOfISOWeekYear
+* getStartOfMonth
+* getStartOfQuarter
+* getStartOfWeek
+* getStartOfWeekYear
+* getStartOfYear
 * getWeek
 * getWeekOfMonth
-* getWeekYear
 * getWeeksInMonth
-* intervalToDuration
+* getWeekYear
 * isAfter ☑️
 * isBefore ☑️
 * isEqual ☑️
-* isExists
-* isFirstDayOfMonth
 * isFriday
 * isIn
 * isLastDayOfMonth
 * isLeapYear
-* isMatch
 * isMonday
 * isNumberLeapYear
 * isSameDay
@@ -112,65 +136,16 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * isWednesday
 * isWeekend
 * isWithinInterval
-* lastDayOfDecade
-* lastDayOfISOWeek
-* lastDayOfISOWeekYear
-* lastDayOfMonth
-* lastDayOfQuarter
-* lastDayOfWeek
-* lastDayOfYear
-* locale
 * max
 * min
+
+## Parsers
 * parse
-* set
-* setDate
-* setDay
-* setDayOfYear
-* setISODay
-* setISOWeek
-* setISOWeekYear
-* setMonth
-* setQuarter
-* setWeek
-* setWeekYear
-* setYear
-* startOfDay
-* startOfDecade
-* startOfISOWeek
-* startOfISOWeekYear
-* startOfMonth
-* startOfQuarter
-* startOfWeek
-* startOfWeekYear
-* startOfYear
-* startOfYesterday
-* sub ☑️
-* subWeekDays
-* subDays ☑️
-* subISOWeekYears
-* subMonths ☑️
-* subQuarters
-* subWeeks
-* subYears ☑️
-
-
-## Generators?
-generateFullYear
-generateFullMonth
-generateRange
-etc..
 
 ## Todo
-* Locales
-* Add examples for each function in jsdoc
 * Add example project
+* Add examples for each function in jsdoc
 * Check package size is ok
 * Check performance is ok
 * Flow?
-
-## Uses
-Games where you want to track dates but not necessarily times
-booking systems -> select date -> fetch times from API -> select time separately
-
-
+* Locales
