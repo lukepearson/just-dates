@@ -39,7 +39,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * set ☑
 * setDay ☑
 * setDayOfYear ☑
-* setISODay
+* setDayOfWeek
 * setISOWeek
 * setISOWeekYear
 * setQuarter

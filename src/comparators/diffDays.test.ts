@@ -28,8 +28,10 @@ describe('diffDays', function() {
   });
 
   it('returns the same result regardless of argument order', function() {
-    const result1 = diffDays({ day: 1, month: 10, year: 2000 }, { day: 1, month: 4, year: 2000 });
-    const result2 = diffDays({ day: 1, month: 4, year: 2000 }, { day: 1, month: 10, year: 2000 });
+    const a = { day: 1, month: 10, year: 2000 };
+    const b = { day: 1, month: 4, year: 2000 };
+    const result1 = diffDays(a, b);
+    const result2 = diffDays(b, a);
     eq(result1, result2);
   });
 
