@@ -20,12 +20,12 @@ yarn add just-dates
 ## Usage
 
 ```js
-import { DateObject, addDays, formatISO } from 'just-dates';
+import { DateObject, addDays, format } from 'just-dates';
 
 const dateObject: DateObject = { year: 2020, month: 06, day: 12 };
 const in20Days = addDays(dateObject, 20);
 
-console.log(`20 days from now is ${formatISO(in20Days))}`);
+console.log(`20 days from now is ${format(in20Days))}`);
 ```
 
 ## Modifiers (returns new DateObject)
@@ -40,14 +40,11 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * setDay ☑
 * setDayOfYear ☑
 * setDayOfWeek ☑
-* setISOWeek
-* setISOWeekYear
 * setQuarter
 * setWeek ☑
 * setWeekYear
 * sub ☑️
 * subDays ☑️
-* subISOWeekYears
 * subMonths ☑️
 * subQuarters
 * subWeekDays
@@ -55,14 +52,11 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * subYears ☑️
 
 ## Comparators
-* diffCalendarISOWeeks
-* diffCalendarISOWeekYears
 * diffCalendarMonths
 * diffCalendarQuarters
 * diffCalendarWeeks
 * diffCalendarYears
-* diffDays
-* diffISOWeekYears
+* diffDays ☑️
 * diffMonths
 * diffQuarters
 * diffWeekDays
@@ -76,7 +70,7 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * generateYear
 
 ## Formatters
-* format
+* format ☑️
 * formatDistance
 * formatDistanceStrict
 * formatDuration
@@ -84,57 +78,47 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 
 ## Queries
 * getDayOfYear
-* getDaysInMonth
+* getDaysInMonth ☑️
 * getDaysInYear
 * getDecade
 * getEndOfDecade
-* getEndOfISOWeek
-* getEndOfISOWeekYear
 * getEndOfMonth
 * getEndOfQuarter
 * getEndOfWeek
 * getEndOfYear
-* getISODay
-* getISOWeek
-* getISOWeeksInYear
-* getISOWeekYear
 * getOverlappingDaysInIntervals
 * getQuarter
 * getStartOfDecade
-* getStartOfISOWeek
-* getStartOfISOWeekYear
 * getStartOfMonth
 * getStartOfQuarter
-* getStartOfWeek
-* getStartOfWeekYear
+* getStartOfWeek ☑️
+* getStartOfWeekYear ☑️
 * getStartOfYear
-* getWeek
+* getWeek ☑️
 * getWeekOfMonth
 * getWeeksInMonth
 * getWeekYear
 * isAfter ☑️
 * isBefore ☑️
 * isEqual ☑️
-* isFriday
+* isFriday ☑️
 * isIn
 * isLastDayOfMonth
-* isLeapYear
-* isMonday
-* isNumberLeapYear
+* isLeapYear ☑️
+* isMonday ☑️
+* isNumberLeapYear ☑️
 * isSameDay
-* isSameISOWeek
-* isSameISOWeekYear
 * isSameMonth
 * isSameQuarter
 * isSameWeek
 * isSameYear
-* isSaturday
-* isSunday
-* isThursday
-* isTuesday
+* isSaturday ☑️
+* isSunday ☑️
+* isThursday ☑️
+* isTuesday ☑️
 * isValid ☑️
-* isWednesday
-* isWeekend
+* isWednesday ☑️
+* isWeekend ☑️
 * isWithinInterval
 * max
 * min
