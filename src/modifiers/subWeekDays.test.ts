@@ -4,12 +4,16 @@ import { deepStrictEqual as eq } from 'assert';
 
 describe('subWeekDays', function() {
   [
+    [18, 1, 16], // Sat -> Thu
+    [19, 1, 16], // Sun -> Thu
     [20, 1, 17], // Mon -> Fri
     [20, 2, 16], // Mon -> Thu
     [20, 3, 15], // Mon -> Wed
     [20, 4, 14], // Mon -> Tue
     [20, 5, 13], // Mon -> Mon
     [20, 6, 10], // Mon -> Fri
+    [20, 7, 9], // Mon -> Thu
+    [20, 8, 8], // Mon -> Wed
     [17, -1, 20], // Fri -> Mon
   ].forEach((testCase) => {
     it(`${testCase[0]} - ${testCase[1]} == ${testCase[2]}`, function() {

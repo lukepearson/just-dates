@@ -15,9 +15,10 @@ export const addWeekDays = (date: DateObject, weekDays: number): DateObject => {
   checkArgs(date, 'date');
   checkArgs(weekDays, 'weekDays');
   const isNegative = weekDays < 0;
+  const days = Math.abs(weekDays);
   const weekDate = skipWeekend(date, isNegative);
-  const extraWeeks = Math.floor(weekDays / 5);
-  let extraDays = weekDays % 5;
+  const extraWeeks = Math.floor(days / 5);
+  let extraDays = Math.abs(days % 5);
   let newDate = addWeeks(weekDate, isNegative ? 0 - extraWeeks : extraWeeks);
   while (extraDays--) {
     newDate = skipWeekend(addDays(newDate, isNegative ? -1 : 1), isNegative);
