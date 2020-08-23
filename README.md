@@ -39,11 +39,11 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * set ☑
 * setDay ☑
 * setDayOfYear ☑
-* setDayOfWeek
+* setDayOfWeek ☑
 * setISOWeek
 * setISOWeekYear
 * setQuarter
-* setWeek
+* setWeek ☑
 * setWeekYear
 * sub ☑️
 * subDays ☑️
@@ -145,9 +145,8 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 ## Terms
 * day - day of the month (1-31)
 * month - month of the year (1-12)
-* year - year number (0-????)
-* week - week number (1-52)
-* ISOWeek - week number (1-53)
+* year - year number (1-????)
+* week - ISO week number (1-53)
 * weekDay - day of the week (1-7, starting on Monday)
 
 ## Todo

@@ -10,7 +10,7 @@ const monday = { year: 1, month: 1, day: 1 };
  * Tuesday = 2
  * ...
  * Sunday = 7
- * @example getDayOfWeek({ year: 2020, month: 8: day: 23 })
+ * @example getDayOfWeek({ year: 2020, month: 8, day: 23 })
  * // 7
  */
 export const getDayOfWeek = (date: DateObject): DayOfWeek => {

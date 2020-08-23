@@ -5,7 +5,7 @@ import { checkArgs } from '../internal/checkArgs';
 /**
  * Returns the number of days in a given DateObject, or YearMonth
  * The year value is required for leap years
- * @example getDaysInMonth({ year: 2020, month: 8: day: 23 })
+ * @example getDaysInMonth({ year: 2020, month: 8, day: 23 })
  * // 31
  * @example getDaysInMonth({ year: 2020, month: 2 })
  * // 29

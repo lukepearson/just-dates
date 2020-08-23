@@ -8,5 +8,6 @@ import { DateObject } from '../dateObject';
  * // 1
  */
 export const diffWeeks = (a: DateObject, b: DateObject): number => {
-  return Math.floor(diffDays(a, b) / 7);
+  const diff = diffDays(a, b) / 7;
+  return Math.floor(diff);
 };

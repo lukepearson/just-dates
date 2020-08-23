@@ -6,9 +6,9 @@ describe('isWeekend', function() {
   [
     { year: 1970, month: 1, day: 3 }, // Saturday
     { year: 1980, month: 1, day: 6 }, // Sunday
-  ].forEach((sunday) => {
-    it(`returns true for ${format(sunday)}`, function() {
-      eq(isWeekend(sunday), true);
+  ].forEach((date) => {
+    it(`returns true for ${format(date)}`, function() {
+      eq(isWeekend(date), true);
     });
   });
 
@@ -18,9 +18,9 @@ describe('isWeekend', function() {
     { year: 1980, month: 1, day: 9 },
     { year: 1980, month: 1, day: 10 },
     { year: 1980, month: 1, day: 11 },
-  ].forEach((sunday) => {
-    it(`returns false for ${format(sunday)}`, function() {
-      eq(isWeekend(sunday), false);
+  ].forEach((date) => {
+    it(`returns false for ${format(date)}`, function() {
+      eq(isWeekend(date), false);
     });
   });
 });
