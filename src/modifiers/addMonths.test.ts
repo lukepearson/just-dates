@@ -17,6 +17,13 @@ describe('addMonths', function() {
     eq(result, expected);
   });
 
+  it('sets the date to the last day of the month if new new month has fewer days', function() {
+    const date: DateObject = { year: 2020, month: 1, day: 31 };
+    const result = addMonths(date, 1);
+    const expected = { year: 2020, month: 2, day: 29 };
+    eq(result, expected);
+  });
+
   [
     { input: -2, expected: { year: 2019, month: 12, day: 20 } },
     { input: -21, expected: { year: 2018, month: 5, day: 20 } },

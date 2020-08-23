@@ -1,6 +1,6 @@
 import { DateObject } from '../dateObject';
-import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
+import { setMonth } from './setMonth';
 
 /**
  * Adds months to a DateObject, returns a new DateObject
@@ -11,6 +11,5 @@ import { checkArgs } from '../internal/checkArgs';
 export const addMonths = (date: DateObject, months: number): DateObject => {
   checkArgs(date, 'date');
   checkArgs(months, 'months');
-  const { year, month, day } = date;
-  return reconcile({ year, month: month + months, day });
+  return setMonth(date, date.month + months);
 };

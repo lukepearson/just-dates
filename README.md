@@ -28,7 +28,8 @@ const in20Days = addDays(dateObject, 20);
 console.log(`20 days from now is ${format(in20Days))}`);
 ```
 
-## Modifiers (returns new DateObject)
+## API
+### Modifiers (returns new DateObject)
 * add ☑️
 * addDays ☑️
 * addMonths ☑️
@@ -40,9 +41,11 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * setDay ☑
 * setDayOfYear ☑
 * setDayOfWeek ☑
-* setQuarter 
+* setMonth ☑
+* setQuarter ☑
 * setWeek ☑
 * setWeekYear
+* setYear ☑
 * sub ☑️
 * subDays ☑️
 * subMonths ☑️
@@ -51,7 +54,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * subWeeks
 * subYears ☑️
 
-## Comparators
+### Comparators
 * diffCalendarMonths
 * diffCalendarQuarters
 * diffCalendarWeeks
@@ -63,20 +66,20 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * diffWeeks ☑
 * diffYears
 
-## Generators
+### Generators
 * generateMonth
 * generateRange
 * generateWeek
 * generateYear
 
-## Formatters
+### Formatters
 * format ☑️
 * formatDistance
 * formatDistanceStrict
 * formatDuration
 * formatRelative
 
-## Queries
+### Queries
 * getDayOfYear
 * getDaysInMonth ☑️
 * getDaysInYear
@@ -123,7 +126,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * max
 * min
 
-## Parsers
+### Parsers
 * parse
 
 ## Terms
