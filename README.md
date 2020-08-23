@@ -28,7 +28,7 @@ const in20Days = addDays(dateObject, 20);
 console.log(`20 days from now is ${formatISO(in20Days))}`);
 ```
 
-## Modifiers
+## Modifiers (returns new DateObject)
 * add ☑️
 * addDays ☑️
 * addMonths ☑️
@@ -36,9 +36,9 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 * addWeekDays ☑️
 * addWeeks ☑️
 * addYears ☑
-* set
-* setDay
-* setDayOfYear
+* set ☑
+* setDay ☑
+* setDayOfYear ☑
 * setISODay
 * setISOWeek
 * setISOWeekYear
@@ -141,6 +141,14 @@ console.log(`20 days from now is ${formatISO(in20Days))}`);
 
 ## Parsers
 * parse
+
+## Terms
+* day - day of the month (1-31)
+* month - month of the year (1-12)
+* year - year number (0-????)
+* week - week number (1-52)
+* ISOWeek - week number (1-53)
+* weekDay - day of the week (1-7, starting on Monday)
 
 ## Todo
 * Add example project
