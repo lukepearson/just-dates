@@ -37,7 +37,6 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly",
     "test": "nyc --reporter=html --reporter=text mocha",
     "coverage": "open ./coverage/index.html",
     "test:watch": "mocha --watch --watch-files --growl 'src/**/*.ts",
@@ -45,9 +44,9 @@
     "prebuild": "yarn lint && yarn test --coverage"
   },
   "files": [
-    "dist"
+    "lib"
   ],
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "main": "dist/index.js"
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js"
 }

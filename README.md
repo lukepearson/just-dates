@@ -40,7 +40,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * setDay ☑
 * setDayOfYear ☑
 * setDayOfWeek ☑
-* setQuarter
+* setQuarter 
 * setWeek ☑
 * setWeekYear
 * sub ☑️
