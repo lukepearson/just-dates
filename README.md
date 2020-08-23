@@ -50,8 +50,8 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * subDays ☑️
 * subMonths ☑️
 * subQuarters ☑
-* subWeekDays
-* subWeeks
+* subWeekDays ☑
+* subWeeks ☑
 * subYears ☑️
 
 ### Comparators

@@ -10,6 +10,11 @@ describe('addWeekDays', function() {
     [6, 4, 10], // Mon -> Fri
     [6, 5, 13], // Mon -> Mon
     [6, 6, 14], // Mon -> Tue
+    [10, 1, 13], // Fri -> Mon
+    [10, 2, 14], // Fri -> Tue
+    [10, 3, 15], // Fri -> Wed
+    [10, 4, 16], // Fri -> Thu
+    [10, 5, 17], // Fri -> Fri
     [11, 1, 14], // Sat -> Tue
     [11, 2, 15], // Sat -> Wed
     [11, 3, 16], // Sat -> Thu
