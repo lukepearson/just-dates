@@ -20,7 +20,7 @@ describe('addQuarters', function() {
   it('adjusts the date if it lands on a month with fewer days', function() {
     const date: DateObject = { year: 2020, month: 1, day: 31 };
     const result = addQuarters(date, 1);
-    const expected = { year: 2020, month: 5, day: 1 };
+    const expected = { year: 2020, month: 4, day: 30 };
     eq(result, expected);
   });
 });

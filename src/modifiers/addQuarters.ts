@@ -1,6 +1,6 @@
 import { DateObject } from '../dateObject';
-import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
+import { addMonths } from './addMonths';
 
 /**
  * Adds quarters to a DateObject, returns a new DateObject
@@ -11,6 +11,5 @@ import { checkArgs } from '../internal/checkArgs';
 export const addQuarters = (date: DateObject, quarters: number): DateObject => {
   checkArgs(date, 'date');
   checkArgs(quarters, 'quarters');
-  const { year, month, day } = date;
-  return reconcile({ year, month: month + quarters * 3, day });
+  return addMonths(date, quarters * 3);
 };
