@@ -1,7 +1,7 @@
 import { DateObject } from '../dateObject';
 
 /**
- * Returns the number of full months between two dates
+ * Returns the current date in the local timezone
  * @example
  * localToday()
  * // { year: 2020, month: 8, day: 1 }
