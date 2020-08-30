@@ -1,9 +1,7 @@
 import { DateObject } from '../dateObject';
-import { isAfter } from './isAfter';
+import { isBefore } from './isBefore';
 import { isNumberLeapYear } from '../queries/isLeapYear';
 import { getDaysInMonth } from '../queries/getDaysInMonth';
-import { checkArgs } from '../internal/checkArgs';
-import { reconcile } from '../modifiers/reconcile';
 
 /**
  * Returns the number of days between two dates
@@ -12,10 +10,7 @@ import { reconcile } from '../modifiers/reconcile';
  * // 9
  */
 export const diffDays = (a: DateObject, b: DateObject): number => {
-  checkArgs(a, 'a');
-  checkArgs(b, 'b');
-  const _a = isAfter(a, b) ? reconcile(a) : reconcile(b);
-  const _b = isAfter(a, b) ? reconcile(b) : reconcile(a);
+  const [_a, _b] = isBefore(a, b) ? [a, b] : [b, a];
   return Math.abs(getTotalDays(_a) - getTotalDays(_b));
 };
 
@@ -45,3 +40,30 @@ export const getTotalDays = (a: DateObject): number => {
   }
   return days;
 };
+
+// This implementation is 8x slower:
+
+// export const diffDays = (a: DateObject, b: DateObject): number => {
+//   checkArgs(a, 'a');
+//   checkArgs(b, 'b');
+//   const [_a, _b] = isBefore(a, b) ? [a, b] : [b, a];
+//   let days = 0;
+//   let newDate = reconcile(_a);
+//   while (diffYears(newDate, _b) > 1) {
+//     if (isLeapYear(newDate)) {
+//       days += 366;
+//     } else {
+//       days += 365;
+//     }
+//     newDate.year++;
+//   }
+//   while (diffMonths(newDate, _b)) {
+//     days += getDaysInMonth(newDate);
+//     newDate.month++;
+//     if (newDate.month > 12) {
+//       newDate = reconcile(newDate);
+//     }
+//   }
+//   days += _b.day - newDate.day;
+//   return days;
+// };

@@ -1,6 +1,9 @@
 import { DateObject } from '../dateObject';
-import { reconcile } from '../modifiers/reconcile';
 import { isAfter } from './isAfter';
+import { getDaysInMonth } from '../queries/getDaysInMonth';
+import { diffYears } from './diffYears';
+import { addYears } from '../modifiers/addYears';
+import { subMonths } from '../modifiers/subMonths';
 
 /**
  * Returns the number of full weeks between two dates
@@ -9,12 +12,20 @@ import { isAfter } from './isAfter';
  * // 1
  */
 export const diff = (a: DateObject, b: DateObject): DateObject => {
-  const _a = isAfter(a, b) ? reconcile(a) : reconcile(b);
-  const _b = isAfter(a, b) ? reconcile(b) : reconcile(a);
-  const diff = {
-    year: _a.year - _b.year,
-    month: _a.month - _b.month,
-    day: _a.day - _b.day,
-  };
-  return diff;
+  const [_a, _b] = isAfter(a, b) ? [b, a] : [a, b];
+  let years = diffYears(_a, _b);
+  let newDate = addYears(_a, years);
+  let months = _b.month - _a.month;
+  if (months < 1 && years > 0) {
+    months += 12;
+    newDate.year--;
+    years--;
+  }
+  let days = _b.day - _a.day;
+  if (days < 0 && months > 0) {
+    days += getDaysInMonth(newDate);
+    subMonths(newDate, 1);
+    months--;
+  }
+  return { year: years, month: months, day: days };
 };

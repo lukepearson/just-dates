@@ -11,6 +11,20 @@ describe('diffMonths', function() {
       ],
       expected: 1,
     },
+    {
+      input: [
+        { year: 2020, month: 8, day: 1 },
+        { year: 2021, month: 2, day: 10 },
+      ],
+      expected: 6,
+    },
+    {
+      input: [
+        { year: 2021, month: 2, day: 10 },
+        { year: 2020, month: 8, day: 1 },
+      ],
+      expected: 6,
+    },
   ].forEach(({ input, expected }) => {
     it(`${format(input[0])} to ${format(input[1])} == ${expected} months`, function() {
       const result = diffMonths(input[0], input[1]);
