@@ -30,49 +30,49 @@ console.log(`20 days from now is ${format(in20Days))}`);
 
 ## API
 ### Modifiers (returns new DateObject)
-* add ☑️
-* addDays ☑️
-* addMonths ☑️
-* addQuarters ☑️
-* addWeekDays ☑️
-* addWeeks ☑️
-* addYears ☑
-* set ☑
-* setDay ☑
-* setDayOfYear ☑
-* setDayOfWeek ☑
-* setMonth ☑
-* setQuarter ☑
-* setWeek ☑
+* add ☑️️️
+* addDays ☑️️️
+* addMonths ☑️️️
+* addQuarters ☑️️️
+* addWeekDays ☑️️️
+* addWeeks ☑️️️
+* addYears ☑️️
+* set ☑️️
+* setDay ☑️️
+* setDayOfYear ☑️️
+* setDayOfWeek ☑️️
+* setMonth ☑️️
+* setQuarter ☑️️
+* setWeek ☑️️
 * setWeekYear
-* setYear ☑
-* sub ☑️
-* subDays ☑️
-* subMonths ☑️
-* subQuarters ☑
-* subWeekDays ☑
-* subWeeks ☑
-* subYears ☑️
+* setYear ☑️️
+* sub ☑️️️
+* subDays ☑️️️
+* subMonths ☑️️️
+* subQuarters ☑️️
+* subWeekDays ☑️️
+* subWeeks ☑️️
+* subYears ☑️️️
 
 ### Comparators
-* diff ☑️
-* diffDays ☑️
-* diffMonths ☑️
-* diffQuarters ☑️
-* diffWeekDays ☑
-* diffWeeks ☑
-* diffYears ☑️
+* diff ☑️️️
+* diffDays ☑️️️
+* diffMonths ☑️️️
+* diffQuarters ☑️️️
+* diffWeekDays ☑️️
+* diffWeeks ☑️️
+* diffYears ☑️️️
 
 ### Generators
-* localToday ☑️
-* UTCToday ☑️
-* generateMonth ☑️
-* generateRange ☑️
-* generateWeek
-* generateYear
+* localToday ☑️️️
+* UTCToday ☑️️️
+* generateMonth ☑️️️
+* generateRange ☑️️️
+* generateWeek ☑️️️
+* generateYear ☑️️️
 
 ### Formatters
-* format ☑️
+* format ☑️️️
 * formatDistance
 * formatDistanceStrict
 * formatDuration
@@ -80,7 +80,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 
 ### Queries
 * getDayOfYear
-* getDaysInMonth ☑️
+* getDaysInMonth ☑️️️
 * getDaysInYear
 * getDecade
 * getEndOfDecade
@@ -93,33 +93,33 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getStartOfDecade
 * getStartOfMonth
 * getStartOfQuarter
-* getStartOfWeek ☑️
-* getStartOfWeekYear ☑️
+* getStartOfWeek ☑️️️
+* getStartOfWeekYear ☑️️️
 * getStartOfYear
-* getWeek ☑️
+* getWeek ☑️️️
 * getWeekOfMonth
 * getWeeksInMonth
 * getWeekYear
-* isAfter ☑️
-* isBefore ☑️
-* isEqual ☑️
-* isFriday ☑️
+* isAfter ☑️️️
+* isBefore ☑️️️
+* isEqual ☑️️️
+* isFriday ☑️️️
 * isIn
 * isLastDayOfMonth
-* isLeapYear ☑️
-* isMonday ☑️
-* isNumberLeapYear ☑️
+* isLeapYear ☑️️️
+* isMonday ☑️️️
+* isNumberLeapYear ☑️️️
 * isSameMonth
 * isSameQuarter
 * isSameWeek
 * isSameYear
-* isSaturday ☑️
-* isSunday ☑️
-* isThursday ☑️
-* isTuesday ☑️
-* isValid ☑️
-* isWednesday ☑️
-* isWeekend ☑️
+* isSaturday ☑️️️
+* isSunday ☑️️️
+* isThursday ☑️️️
+* isTuesday ☑️️️
+* isValid ☑️️️
+* isWednesday ☑️️️
+* isWeekend ☑️️️
 * isWithinInterval
 * max
 * min
