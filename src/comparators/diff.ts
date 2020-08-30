@@ -6,10 +6,10 @@ import { addYears } from '../modifiers/addYears';
 import { subMonths } from '../modifiers/subMonths';
 
 /**
- * Returns the number of full weeks between two dates
+ * Returns the difference between two dates as a DateObject
  * @example
- * diff({ year: 2020, month: 1, day: 1 }, { year: 2020, month: 1, day: 10 })
- * // 1
+ * diff({ year: 2020, month: 8, day: 20 }, { year: 2026, month: 1, day: 10 })
+ * // { year: 5, month: 4, day: 21 }
  */
 export const diff = (a: DateObject, b: DateObject): DateObject => {
   const [_a, _b] = isAfter(a, b) ? [b, a] : [a, b];

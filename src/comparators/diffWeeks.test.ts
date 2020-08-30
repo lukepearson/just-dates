@@ -5,44 +5,33 @@ import { format } from '../formatters/format';
 describe('diffWeeks', function() {
   [
     {
-      input: [
-        { year: 2015, month: 12, day: 28 },
-        { year: 2016, month: 5, day: 2 },
-      ],
+      a: { year: 2015, month: 12, day: 28 },
+      b: { year: 2016, month: 5, day: 2 },
       expected: 18,
     },
     {
-      input: [
-        { day: 1, month: 1, year: 2020 },
-        { day: 10, month: 1, year: 2020 },
-      ],
+      a: { day: 1, month: 1, year: 2020 },
+      b: { day: 10, month: 1, year: 2020 },
       expected: 1,
     },
     {
-      input: [
-        { day: 30, month: 12, year: 2019 },
-        { day: 23, month: 8, year: 2020 },
-      ],
+      a: { day: 30, month: 12, year: 2019 },
+      b: { day: 23, month: 8, year: 2020 },
       expected: 33,
     },
     {
-      input: [
-        { day: 30, month: 12, year: 2019 },
-        { day: 24, month: 8, year: 2020 },
-      ],
+      a: { day: 30, month: 12, year: 2019 },
+      b: { day: 24, month: 8, year: 2020 },
       expected: 34,
     },
     {
-      input: [
-        { day: 30, month: 12, year: 2019 },
-        { day: 30, month: 8, year: 2020 },
-      ],
+      a: { day: 30, month: 12, year: 2019 },
+      b: { day: 30, month: 8, year: 2020 },
       expected: 34,
     },
-  ].forEach(({ input, expected }) => {
-    it(`${format(input[0])} to ${format(input[1])} == ${expected} weeks`, function() {
-      const result = diffWeeks(input[0], input[1]);
-      eq(result, expected);
+  ].forEach(({ a, b, expected }) => {
+    it(`${format(a)} to ${format(b)} == ${expected} weeks`, function() {
+      eq(diffWeeks(a, b), expected);
     });
   });
 

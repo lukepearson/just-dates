@@ -55,18 +55,18 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * subYears ☑️
 
 ### Comparators
-* diffCalendarMonths
-* diffCalendarQuarters
-* diffCalendarWeeks
-* diffCalendarYears
+* diff ☑️
 * diffDays ☑️
-* diffMonths
-* diffQuarters
-* diffWeekDays
+* diffMonths ☑️
+* diffQuarters ☑️
+* diffWeekDays ☑
 * diffWeeks ☑
-* diffYears
+* diffYears ☑️
 
 ### Generators
+* localToday
+* UTCToday
+* today
 * generateMonth
 * generateRange
 * generateWeek
@@ -110,7 +110,6 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * isLeapYear ☑️
 * isMonday ☑️
 * isNumberLeapYear ☑️
-* isSameDay
 * isSameMonth
 * isSameQuarter
 * isSameWeek
@@ -141,5 +140,5 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * Add examples for each function in jsdoc
 * Check package size is ok
 * Check performance is ok
-* Flow?
 * Locales
+* Allow changing first day of week

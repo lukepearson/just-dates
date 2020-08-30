@@ -5,30 +5,23 @@ import { format } from '../formatters/format';
 describe('diffMonths', function() {
   [
     {
-      input: [
-        { year: 2020, month: 11, day: 2 },
-        { year: 2020, month: 12, day: 2 },
-      ],
+      a: { year: 2020, month: 11, day: 2 },
+      b: { year: 2020, month: 12, day: 2 },
       expected: 1,
     },
     {
-      input: [
-        { year: 2020, month: 8, day: 1 },
-        { year: 2021, month: 2, day: 10 },
-      ],
+      a: { year: 2020, month: 8, day: 1 },
+      b: { year: 2021, month: 2, day: 10 },
       expected: 6,
     },
     {
-      input: [
-        { year: 2021, month: 2, day: 10 },
-        { year: 2020, month: 8, day: 1 },
-      ],
+      a: { year: 2021, month: 2, day: 10 },
+      b: { year: 2020, month: 8, day: 1 },
       expected: 6,
     },
-  ].forEach(({ input, expected }) => {
-    it(`${format(input[0])} to ${format(input[1])} == ${expected} months`, function() {
-      const result = diffMonths(input[0], input[1]);
-      eq(result, expected);
+  ].forEach(({ a, b, expected }) => {
+    it(`${format(a)} to ${format(b)} == ${expected} months`, function() {
+      eq(diffMonths(a, b), expected);
     });
   });
 
