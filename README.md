@@ -64,11 +64,10 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * diffYears ☑️
 
 ### Generators
-* localToday
-* UTCToday
-* today
-* generateMonth
-* generateRange
+* localToday ☑️
+* UTCToday ☑️
+* generateMonth ☑️
+* generateRange ☑️
 * generateWeek
 * generateYear
 
