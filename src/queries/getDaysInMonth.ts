@@ -10,7 +10,7 @@ import { checkArgs } from '../internal/checkArgs';
  * @example getDaysInMonth({ year: 2020, month: 2 })
  * // 29
  */
-export const getDaysInMonth = (date: YearMonth | DateObject) => {
+export const getDaysInMonth = (date: YearMonth | DateObject): number => {
   checkArgs(date, 'date');
   let { year, month } = date;
   while (month < 1) {

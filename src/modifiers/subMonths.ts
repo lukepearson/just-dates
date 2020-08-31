@@ -3,7 +3,7 @@ import { addMonths } from './addMonths';
 import { checkArgs } from '../internal/checkArgs';
 
 /**
- * Subtracts months from a DateObject
+ * Subtracts months from a DateObject, returns a new DateObject
  * @example
  * subDays({ year: 2020, month: 2, day: 20 }, 2);
  * // { year: 2019, month: 12, day: 20 }

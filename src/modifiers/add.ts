@@ -3,7 +3,7 @@ import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
 
 /**
- * Adds a Duration to a DateObject
+ * Adds a Duration to a DateObject, returns a new DateObject
  * @example
  * add({ year: 2020, month: 1, day: 1 }, { year: 2 });
  * // { year: 2022, month: 1, day: 1 }

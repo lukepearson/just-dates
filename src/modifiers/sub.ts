@@ -3,7 +3,7 @@ import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
 
 /**
- * Subtracts a Duration from a DateObject
+ * Subtracts a Duration from a DateObject, returns a new DateObject
  * @example
  * setWeek({ year: 2020, month: 2, day: 10 }, { month: 1 });
  * // { year: 2020, month: 1, day: 10 }

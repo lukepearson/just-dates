@@ -3,10 +3,10 @@ import { checkArgs } from '../internal/checkArgs';
 import { addWeekDays } from './addWeekDays';
 
 /**
- * subs week days to a DateObject, returns a new DateObject
+ * Subracts week days from a DateObject, returns a new DateObject
  * @example
- * subWeekDays({ year: 2020, month: 1, day: 11 }, 5);
- * // { year: 2020, month: 1, day:  }
+ * subWeekDays({ year: 2020, month: 1, day: 20 }, 6);
+ * // { year: 2020, month: 1, day: 10 }
  */
 export const subWeekDays = (date: DateObject, weekDays: number): DateObject => {
   checkArgs(date, 'date');
