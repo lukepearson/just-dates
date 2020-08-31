@@ -79,9 +79,9 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * formatRelative
 
 ### Queries
-* getDayOfYear
+* getDayOfYear ☑️️️
 * getDaysInMonth ☑️️️
-* getDaysInYear
+* getDaysInYear ☑️️️
 * getDecade
 * getEndOfDecade
 * getEndOfMonth
@@ -95,7 +95,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getStartOfQuarter
 * getStartOfWeek ☑️️️
 * getStartOfWeekYear ☑️️️
-* getStartOfYear
+* getStartOfYear ☑️️️
 * getWeek ☑️️️
 * getWeekOfMonth
 * getWeeksInMonth
