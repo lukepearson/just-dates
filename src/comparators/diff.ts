@@ -16,16 +16,16 @@ export const diff = (a: DateObject, b: DateObject): DateObject => {
   let years = diffYears(_a, _b);
   let newDate = addYears(_a, years);
   let months = _b.month - _a.month;
-  if (months < 1 && years > 0) {
-    months += 12;
-    newDate.year--;
-    years--;
-  }
   let days = _b.day - _a.day;
-  if (days < 0 && months > 0) {
+  if (days < 0) {
     days += getDaysInMonth(newDate);
     subMonths(newDate, 1);
     months--;
+  }
+  if (months < 0 && years > 0) {
+    months += 12;
+    newDate.year--;
+    years--;
   }
   return { year: years, month: months, day: days };
 };

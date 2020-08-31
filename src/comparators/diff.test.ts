@@ -24,6 +24,21 @@ describe('diff', function() {
       b: { year: 2026, month: 1, day: 10 },
       expected: { year: 5, month: 4, day: 21 },
     },
+    {
+      a: { year: 2021, month: 6, day: 6 },
+      b: { year: 2020, month: 6, day: 6 },
+      expected: { year: 1, month: 0, day: 0 },
+    },
+    {
+      a: { year: 2026, month: 6, day: 6 },
+      b: { year: 2026, month: 6, day: 6 },
+      expected: { year: 0, month: 0, day: 0 },
+    },
+    {
+      a: { year: 2026, month: 1, day: 1 },
+      b: { year: 2026, month: 12, day: 31 },
+      expected: { year: 0, month: 11, day: 30 },
+    },
   ].forEach(({ a, b, expected }) => {
     it(`${format(a)} - ${format(b)} == ${format(expected)} months`, function() {
       eq(diff(a, b), expected);

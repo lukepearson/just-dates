@@ -73,8 +73,8 @@ console.log(`20 days from now is ${format(in20Days))}`);
 
 ### Formatters
 * format ☑️️️
-* formatDistance
-* formatDistanceStrict
+* formatDistance ☑️️️
+* formatFromNow ☑️️️
 * formatDuration
 * formatRelative
 
