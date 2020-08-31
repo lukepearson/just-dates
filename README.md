@@ -95,7 +95,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getStartOfWeekYear ☑️️️
 * getStartOfYear ☑️️️
 * getWeek ☑️️️
-* getWeekOfMonth
+* getWeekOfMonth ☑️️️
 * getWeeksInMonth
 * getWeekYear
 * isAfter ☑️️️
