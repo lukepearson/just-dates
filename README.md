@@ -119,8 +119,8 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * isWednesday ☑️️️
 * isWeekend ☑️️️
 * isWithinInterval
-* max
-* min
+* max ☑️️️
+* min ☑️️️
 
 ### Parsers
 * parse
@@ -134,8 +134,6 @@ console.log(`20 days from now is ${format(in20Days))}`);
 
 ## Todo
 * Add example project
-* Add examples for each function in jsdoc
-* Check package size is ok
-* Check performance is ok
+* Performance test
 * Locales
 * Allow changing first day of week
