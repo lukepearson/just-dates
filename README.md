@@ -84,7 +84,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getDaysInYear ☑️️️
 * getEndOfMonth ☑️️️
 * getEndOfQuarter ☑️️️
-* getEndOfWeek
+* getEndOfWeek ☑️️️
 * getEndOfYear
 * getOverlappingDaysInIntervals
 * getQuarter
