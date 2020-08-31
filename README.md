@@ -86,31 +86,31 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getEndOfQuarter ☑️️️
 * getEndOfWeek ☑️️️
 * getEndOfYear ☑️️️
-* getOverlappingDaysInIntervals
-* getQuarter
-* getStartOfDecade
-* getStartOfMonth
-* getStartOfQuarter
+* getOverlappingDaysInIntervals 
+* getQuarter 
+* getStartOfDecade 
+* getStartOfMonth 
+* getStartOfQuarter 
 * getStartOfWeek ☑️️️
 * getStartOfWeekYear ☑️️️
 * getStartOfYear ☑️️️
 * getWeek ☑️️️
 * getWeekOfMonth ☑️️️
-* getWeeksInMonth
-* getWeekYear
+* getWeeksInMonth 
+* getWeekYear 
 * isAfter ☑️️️
 * isBefore ☑️️️
 * isEqual ☑️️️
 * isFriday ☑️️️
-* isIn
-* isLastDayOfMonth
+* isIn 
+* isLastDayOfMonth 
 * isLeapYear ☑️️️
 * isMonday ☑️️️
 * isNumberLeapYear ☑️️️
-* isSameMonth
-* isSameQuarter
-* isSameWeek
-* isSameYear
+* isSameMonth 
+* isSameQuarter 
+* isSameWeek 
+* isSameYear 
 * isSaturday ☑️️️
 * isSunday ☑️️️
 * isThursday ☑️️️
@@ -118,7 +118,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * isValid ☑️️️
 * isWednesday ☑️️️
 * isWeekend ☑️️️
-* isWithinInterval
+* isWithinInterval 
 * max ☑️️️
 * min ☑️️️
 
