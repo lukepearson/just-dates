@@ -2,7 +2,7 @@ import { DateObject } from '../dateObject';
 import { generateRange } from './generateRange';
 
 /**
- * Generates a full week from a given DateObject
+ * Generates a full year
  * @example
  * generateYear(2020)
  * // [{ year: 2020, month: 1, day: 1 }, { year: 2020, month: 1, day: 2 }, ...]

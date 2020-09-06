@@ -1,7 +1,10 @@
 export { DateObject } from './dateObject';
 
+// Durations
+export { getDuration } from './durations/getDuration';
+export { formatDuration } from './durations/formatDuration';
+
 // Comparators
-export { diff } from './comparators/diff';
 export { diffCalendarWeeks } from './comparators/diffCalendarWeeks';
 export { diffDays } from './comparators/diffDays';
 export { diffMonths } from './comparators/diffMonths';

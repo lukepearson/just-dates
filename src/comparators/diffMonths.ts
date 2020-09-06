@@ -1,6 +1,5 @@
 import { DateObject } from '../dateObject';
 import { diffYears } from './diffYears';
-import { checkArgs } from '../internal/checkArgs';
 import { isAfter } from './isAfter';
 
 /**
@@ -10,8 +9,6 @@ import { isAfter } from './isAfter';
  * // 6
  */
 export const diffMonths = (a: DateObject, b: DateObject): number => {
-  checkArgs(a, 'a');
-  checkArgs(b, 'b');
   const [_a, _b] = isAfter(a, b) ? [a, b] : [b, a];
   const years = diffYears(_a, _b);
   return Math.abs(_a.month - _b.month + years * 12);

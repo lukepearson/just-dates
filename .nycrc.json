@@ -5,6 +5,7 @@
     "exclude": [
         "**/*.js",
         "**/*.test.ts",
+        "src/index.ts",
         "lib",
         "examples"
     ],

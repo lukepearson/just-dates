@@ -14,11 +14,11 @@ import { checkArgs } from '../internal/checkArgs';
 export const sub = (date: DateObject, duration: Duration): DateObject => {
   checkArgs(date, 'date');
   checkArgs(duration, 'duration');
-  const weekDays = (duration.week || 0) * 7;
-  const days = (duration.day || 0) + weekDays;
+  const weekDays = (duration.weeks || 0) * 7;
+  const days = (duration.days || 0) + weekDays;
   const delta = {
-    year: duration.year || 0,
-    month: duration.month || 0,
+    year: duration.years || 0,
+    month: duration.months || 0,
     day: days,
   };
   return reconcile({

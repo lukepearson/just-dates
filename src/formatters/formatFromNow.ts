@@ -10,7 +10,7 @@ import {
   DayOfWeek,
 } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
-import { diff } from '../comparators/diff';
+import { getDuration } from '../durations/getDuration';
 import { isEqual } from '../comparators/isEqual';
 import { isBefore } from '../comparators/isBefore';
 import { getDayOfWeek } from '../queries/getDayOfWeek';
@@ -70,14 +70,15 @@ export const formatFromNow = (date: DateObject, now: DateObject = localToday()):
   const days = diffDays(date, now);
   const weeks = Math.abs(getWeek(date) - getWeek(now));
   const dayOfWeek = getDay(getDayOfWeek(date));
-  const { year, month } = diff(date, now);
+  const { years, months } = getDuration(date, now);
   if (isEqual(date, now)) return 'Today';
-  if (year > 1) return isFuture ? `In ${num(year)} years` : `${cap(num(year))} years ago`;
+  if (years && years > 1)
+    return isFuture ? `In ${num(years)} years` : `${cap(num(years))} years ago`;
   if (days > 365) return isFuture ? 'Next year' : 'Last year';
   if (days === 1) return isFuture ? 'Tomorrow' : 'Yesterday';
   if (weeks === 0) return isFuture ? `On ${dayOfWeek}` : `${cap(num(days))} days ago`;
   if (weeks === 1) return isFuture ? `Next ${dayOfWeek}` : `Last ${dayOfWeek}`;
-  if (month === 0) return isFuture ? `In ${num(weeks)} weeks` : `${cap(num(weeks))} weeks ago`;
-  if (month === 1) return isFuture ? 'Next month' : 'Last month';
-  return isFuture ? `In ${num(month)} months` : `${cap(num(month))} months ago`;
+  if (!months) return isFuture ? `In ${num(weeks)} weeks` : `${cap(num(weeks))} weeks ago`;
+  if (months === 1) return isFuture ? 'Next month' : 'Last month';
+  return isFuture ? `In ${num(months)} months` : `${cap(num(months))} months ago`;
 };

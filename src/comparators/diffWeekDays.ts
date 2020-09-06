@@ -1,5 +1,4 @@
 import { DateObject } from '../dateObject';
-import { checkArgs } from '../internal/checkArgs';
 import { isAfter } from './isAfter';
 import { diffWeeks } from './diffWeeks';
 import { addDays } from '../modifiers/addDays';
@@ -13,8 +12,6 @@ import { isWeekend } from '../queries/isWeekend';
  * // 2
  */
 export const diffWeekDays = (a: DateObject, b: DateObject): number => {
-  checkArgs(a, 'a');
-  checkArgs(b, 'b');
   const [_a, _b] = isAfter(a, b) ? [b, a] : [a, b];
   const weeks = diffWeeks(_a, _b);
   let weekDays = weeks * 5;

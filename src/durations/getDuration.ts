@@ -1,17 +1,17 @@
-import { DateObject } from '../dateObject';
-import { isAfter } from './isAfter';
+import { DateObject, Duration } from '../dateObject';
+import { isAfter } from '../comparators/isAfter';
 import { getDaysInMonth } from '../queries/getDaysInMonth';
-import { diffYears } from './diffYears';
+import { diffYears } from '../comparators/diffYears';
 import { addYears } from '../modifiers/addYears';
 import { subMonths } from '../modifiers/subMonths';
 
 /**
- * Returns the difference between two dates as a DateObject
+ * Returns the difference between two dates as a Duration
  * @example
- * diff({ year: 2020, month: 8, day: 20 }, { year: 2026, month: 1, day: 10 })
- * // { year: 5, month: 4, day: 21 }
+ * getDuration({ year: 2020, month: 8, day: 20 }, { year: 2026, month: 1, day: 10 })
+ * // { years: 5, months: 4, days: 21 }
  */
-export const diff = (a: DateObject, b: DateObject): DateObject => {
+export const getDuration = (a: DateObject, b: DateObject): Duration => {
   const [_a, _b] = isAfter(a, b) ? [b, a] : [a, b];
   let years = diffYears(_a, _b);
   let newDate = addYears(_a, years);
@@ -27,5 +27,5 @@ export const diff = (a: DateObject, b: DateObject): DateObject => {
     newDate.year--;
     years--;
   }
-  return { year: years, month: months, day: days };
+  return { years, months, days };
 };

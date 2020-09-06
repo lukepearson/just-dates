@@ -1,6 +1,5 @@
 import { DateObject } from '../dateObject';
 import { diffMonths } from './diffMonths';
-import { checkArgs } from '../internal/checkArgs';
 import { isAfter } from './isAfter';
 
 /**
@@ -10,8 +9,6 @@ import { isAfter } from './isAfter';
  * // 2
  */
 export const diffQuarters = (a: DateObject, b: DateObject): number => {
-  checkArgs(a, 'a');
-  checkArgs(b, 'b');
   const [_a, _b] = isAfter(a, b) ? [a, b] : [b, a];
   const months = diffMonths(_a, _b);
   return Math.floor(months / 3);

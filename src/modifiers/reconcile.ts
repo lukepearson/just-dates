@@ -22,12 +22,8 @@ export const reconcile = (date: DateObject): DateObject => {
   return sortedObject;
 };
 
-const toNumbers = ({ year, month, day }: DateObject): DateObject => {
-  return { year: Number(year), month: Number(month), day: Number(day) };
-};
-
 const sortYearMonthDay = (date: DateObject) => {
-  let { year, month, day } = toNumbers(date);
+  let { year, month, day } = date;
   let daysInMonth = getDaysInMonth({ month, year });
   if (day > daysInMonth) {
     month++;

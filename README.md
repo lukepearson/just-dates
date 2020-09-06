@@ -44,7 +44,6 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * setMonth ☑️️
 * setQuarter ☑️️
 * setWeek ☑️️
-* setWeekYear
 * setYear ☑️️
 * sub ☑️️️
 * subDays ☑️️️
@@ -54,8 +53,11 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * subWeeks ☑️️
 * subYears ☑️️️
 
+### Durations
+* getDuration ☑️️️
+* formatDuration ☑️️️
+
 ### Comparators
-* diff ☑️️️
 * diffDays ☑️️️
 * diffMonths ☑️️️
 * diffQuarters ☑️️️
@@ -75,8 +77,12 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * format ☑️️️
 * formatDistance ☑️️️
 * formatFromNow ☑️️️
-* formatDuration
-* formatRelative
+
+### DateRanges
+* getRange
+* isIn
+* innerJoin
+* outerJoin
 
 ### Queries
 * getDayOfYear ☑️️️
@@ -86,8 +92,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getEndOfQuarter ☑️️️
 * getEndOfWeek ☑️️️
 * getEndOfYear ☑️️️
-* getOverlappingDaysInIntervals 
-* getQuarter 
+* getQuarter ☑️️️
 * getStartOfDecade 
 * getStartOfMonth 
 * getStartOfQuarter 
@@ -97,7 +102,6 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getWeek ☑️️️
 * getWeekOfMonth ☑️️️
 * getWeeksInMonth 
-* getWeekYear 
 * isAfter ☑️️️
 * isBefore ☑️️️
 * isEqual ☑️️️
@@ -118,7 +122,6 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * isValid ☑️️️
 * isWednesday ☑️️️
 * isWeekend ☑️️️
-* isWithinInterval 
 * max ☑️️️
 * min ☑️️️
 

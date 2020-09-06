@@ -15,10 +15,10 @@ export interface Year {
 }
 
 export interface Duration {
-  day?: number;
-  week?: number;
-  month?: number;
-  year?: number;
+  days?: number;
+  weeks?: number;
+  months?: number;
+  years?: number;
 }
 
 export type YearMonth = Year & Month;
