@@ -1,4 +1,4 @@
-import { DateObject, DayOfWeek } from 'dateObject';
+import { DateObject, DayOfWeek } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { getDayOfWeek } from '../queries/getDayOfWeek';
 import { addDays } from './addDays';

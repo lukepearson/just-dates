@@ -72,6 +72,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * generateRange ☑️️️
 * generateWeek ☑️️️
 * generateYear ☑️️️
+* generateWeekYear ☑️️️
 
 ### Formatters
 * format ☑️️️
@@ -91,6 +92,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getEndOfMonth ☑️️️
 * getEndOfQuarter ☑️️️
 * getEndOfWeek ☑️️️
+* getEndOfWeekYear ☑️️️
 * getEndOfYear ☑️️️
 * getQuarter ☑️️️
 * getStartOfDecade 
