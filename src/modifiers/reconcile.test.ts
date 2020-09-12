@@ -17,7 +17,6 @@ describe('reconcile', function() {
   });
 
   it('increments the year if there are more than 365 days', function() {
-    this.timeout(2000);
     [
       { input: 10, expected: { day: 7, month: 1, year: 2002 } },
       { input: 375, expected: { day: 7, month: 1, year: 2003 } },

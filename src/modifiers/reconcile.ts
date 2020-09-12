@@ -43,11 +43,5 @@ const sortYearMonthDay = (date: DateObject) => {
     year--;
     month += 12;
   }
-  year = Math.max(1, year);
-  daysInMonth = getDaysInMonth({ month, year });
-  if (day > daysInMonth) {
-    month++;
-    day -= daysInMonth;
-  }
-  return { year, month, day };
+  return { year: Math.max(1, year), month, day };
 };
