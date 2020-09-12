@@ -79,12 +79,6 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * formatDistance ☑️️️
 * formatFromNow ☑️️️
 
-### DateRanges
-* getRange
-* isIn
-* innerJoin
-* outerJoin
-
 ### Queries
 * getDayOfYear ☑️️️
 * getDaysInMonth ☑️️️
@@ -96,8 +90,8 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getEndOfYear ☑️️️
 * getQuarter ☑️️️
 * getStartOfDecade ☑️️️
-* getStartOfMonth 
-* getStartOfQuarter 
+* getStartOfMonth ☑️️️
+* getStartOfQuarter ☑️️️
 * getStartOfWeek ☑️️️
 * getStartOfWeekYear ☑️️️
 * getStartOfYear ☑️️️
