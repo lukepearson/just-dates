@@ -71,7 +71,7 @@ export { getQuarter } from './queries/getQuarter';
 export { getStartOfWeek } from './queries/getStartOfWeek';
 export { getStartOfWeekYear } from './queries/getStartOfWeekYear';
 export { getStartOfYear } from './queries/getStartOfYear';
-export { getWeek } from './queries/getWeek';
+export { getCalendarWeek } from './queries/getCalendarWeek';
 export { getWeekOfMonth } from './queries/getWeekOfMonth';
 export { isFriday } from './queries/isFriday';
 export { isLeapYear } from './queries/isLeapYear';

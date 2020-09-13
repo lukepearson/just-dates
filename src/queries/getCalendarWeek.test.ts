@@ -1,8 +1,8 @@
 import { equal as eq } from 'assert';
-import { getWeek } from './getWeek';
+import { getCalendarWeek } from './getCalendarWeek';
 import { format } from '../formatters/format';
 
-describe('getWeek', function() {
+describe('getCalendarWeek', function() {
   [
     {
       input: { year: 2019, month: 1, day: 1 },
@@ -46,7 +46,7 @@ describe('getWeek', function() {
     },
   ].forEach(({ input, expected }) => {
     it(`${format(input)} == week number ${expected}`, function() {
-      eq(getWeek(input), expected);
+      eq(getCalendarWeek(input), expected);
     });
   });
 });

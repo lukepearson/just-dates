@@ -1,5 +1,5 @@
 import { DateObject } from '../dateObject';
-import { getWeek } from '../queries/getWeek';
+import { getCalendarWeek } from '../queries/getCalendarWeek';
 import { diffYears } from './diffYears';
 import { isBefore } from './isBefore';
 
@@ -12,8 +12,8 @@ import { isBefore } from './isBefore';
 export const diffCalendarWeeks = (a: DateObject, b: DateObject): number => {
   const [_a, _b] = isBefore(a, b) ? [a, b] : [b, a];
   if (_a.year === _b.year) {
-    return Math.abs(getWeek(_b) - getWeek(_a));
+    return Math.abs(getCalendarWeek(_b) - getCalendarWeek(_a));
   }
-  const remainingWeeks = 52 - getWeek(_a);
-  return (diffYears(_a, _b) - 1) * 52 + remainingWeeks + getWeek(_b);
+  const remainingWeeks = 52 - getCalendarWeek(_a);
+  return (diffYears(_a, _b) - 1) * 52 + remainingWeeks + getCalendarWeek(_b);
 };

@@ -95,9 +95,9 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * getStartOfWeek ☑️️️
 * getStartOfWeekYear ☑️️️
 * getStartOfYear ☑️️️
-* getWeek ☑️️️
+* getCalendarWeek ☑️️️
 * getWeekOfMonth ☑️️️
-* getWeeksInMonth 
+* getWeeksInMonth ☑️️️
 * isAfter ☑️️️
 * isBefore ☑️️️
 * isEqual ☑️️️
@@ -107,7 +107,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * isLeapYear ☑️️️
 * isMonday ☑️️️
 * isNumberLeapYear ☑️️️
-* isSameMonth 
+* isSameMonth ☑️️️
 * isSameQuarter 
 * isSameWeek 
 * isSameYear 

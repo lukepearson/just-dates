@@ -15,7 +15,7 @@ import { isEqual } from '../comparators/isEqual';
 import { isBefore } from '../comparators/isBefore';
 import { getDayOfWeek } from '../queries/getDayOfWeek';
 import { diffDays } from '../comparators/diffDays';
-import { getWeek } from '../queries/getWeek';
+import { getCalendarWeek } from '../queries/getCalendarWeek';
 import { localToday } from '../generators/localToday';
 
 const getDay = (day: DayOfWeek): string => {
@@ -68,7 +68,7 @@ export const formatFromNow = (date: DateObject, now: DateObject = localToday()):
   checkArgs(now, 'now');
   const isFuture = isBefore(now, date);
   const days = diffDays(date, now);
-  const weeks = Math.abs(getWeek(date) - getWeek(now));
+  const weeks = Math.abs(getCalendarWeek(date) - getCalendarWeek(now));
   const dayOfWeek = getDay(getDayOfWeek(date));
   const { years, months } = getDuration(date, now);
   if (isEqual(date, now)) return 'Today';

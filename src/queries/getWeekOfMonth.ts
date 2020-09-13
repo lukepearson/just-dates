@@ -1,5 +1,7 @@
 import { DateObject } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
+import { getDayOfWeek } from './getDayOfWeek';
+import { getStartOfMonth } from './getStartOfMonth';
 
 /**
  * Returns the week of the month as a number
@@ -8,5 +10,9 @@ import { checkArgs } from '../internal/checkArgs';
  */
 export const getWeekOfMonth = (date: DateObject): number => {
   checkArgs(date, 'date');
-  return Math.ceil(date.day / 7);
+  const firstDayOfMonth = getStartOfMonth(date);
+  const startDay = getDayOfWeek(firstDayOfMonth);
+  const lastDayOfFirstWeek = firstDayOfMonth.day + 7 - startDay;
+  const daysLeft = date.day - lastDayOfFirstWeek;
+  return date.day < lastDayOfFirstWeek ? 1 : Math.ceil(daysLeft / 7) + 1;
 };
