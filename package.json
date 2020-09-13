@@ -33,18 +33,20 @@
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0",
     "prettier": "^1.18.2",
+    "rimraf": "^3.0.2",
     "sinon": "^9.0.3",
     "ts-node": "^8.4.1",
     "tslib": "^2.0.0",
     "typescript": "^3.9.5"
   },
   "scripts": {
-    "build": "yarn cti create ./src && tsc -p tsconfig.json",
+    "build": "yarn cti create ./src -i '*.test.ts' && tsc -p tsconfig.json",
     "test": "TZ=Japan nyc --reporter=html --reporter=text mocha",
     "coverage": "open ./coverage/index.html",
     "test:watch": "mocha --watch --watch-files --growl 'src/**/*.ts",
     "lint": "eslint --fix -c .eslintrc.js --ext .ts src/**/*.ts",
-    "prebuild": "yarn lint && yarn test --coverage"
+    "clean": "rimraf ./lib",
+    "prebuild": "yarn clean && yarn lint && yarn test --coverage"
   },
   "files": [
     "lib"
