@@ -2,7 +2,7 @@ import { DateObject } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 
 /**
- * Are the DateObjects in the same month?
+ * Are the DateObjects in the same month of the same year?
  * @example isSameMonth({ year: 1970, month: 1, day: 6 }, { year: 1970, month: 1, day: 12 })
  * // true
  */

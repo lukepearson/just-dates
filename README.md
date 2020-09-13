@@ -30,12 +30,12 @@ console.log(`20 days from now is ${format(in20Days))}`);
 
 ## API
 ### Modifiers (returns new DateObject)
-* add ☑️️️
-* addDays ☑️️️
-* addMonths ☑️️️
-* addQuarters ☑️️️
-* addWeekDays ☑️️️
-* addWeeks ☑️️️
+* add ✓
+* addDays ✓
+* addMonths ✓
+* addQuarters ✓
+* addWeekDays ✓
+* addWeeks ✓
 * addYears ☑️️
 * set ☑️️
 * setDay ☑️️
@@ -45,80 +45,80 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * setQuarter ☑️️
 * setWeek ☑️️
 * setYear ☑️️
-* sub ☑️️️
-* subDays ☑️️️
-* subMonths ☑️️️
+* sub ✓
+* subDays ✓
+* subMonths ✓
 * subQuarters ☑️️
 * subWeekDays ☑️️
 * subWeeks ☑️️
-* subYears ☑️️️
+* subYears ✓
 
 ### Durations
-* getDuration ☑️️️
-* formatDuration ☑️️️
+* getDuration ✓
+* formatDuration ✓
 
 ### Comparators
-* diffDays ☑️️️
-* diffMonths ☑️️️
-* diffQuarters ☑️️️
+* diffDays ✓
+* diffMonths ✓
+* diffQuarters ✓
 * diffWeekDays ☑️️
 * diffWeeks ☑️️
-* diffYears ☑️️️
+* diffYears ✓
 
 ### Generators
-* localToday ☑️️️
-* UTCToday ☑️️️
-* generateMonth ☑️️️
-* generateRange ☑️️️
-* generateWeek ☑️️️
-* generateYear ☑️️️
-* generateWeekYear ☑️️️
+* localToday ✓
+* UTCToday ✓
+* generateMonth ✓
+* generateRange ✓
+* generateWeek ✓
+* generateYear ✓
+* generateWeekYear ✓
 
 ### Formatters
-* format ☑️️️
-* formatDistance ☑️️️
-* formatFromNow ☑️️️
+* format ✓
+* formatDistance ✓
+* formatFromNow ✓
 
 ### Queries
-* getDayOfYear ☑️️️
-* getDaysInMonth ☑️️️
-* getDaysInYear ☑️️️
-* getEndOfMonth ☑️️️
-* getEndOfQuarter ☑️️️
-* getEndOfWeek ☑️️️
-* getEndOfWeekYear ☑️️️
-* getEndOfYear ☑️️️
-* getQuarter ☑️️️
-* getStartOfDecade ☑️️️
-* getStartOfMonth ☑️️️
-* getStartOfQuarter ☑️️️
-* getStartOfWeek ☑️️️
-* getStartOfWeekYear ☑️️️
-* getStartOfYear ☑️️️
-* getCalendarWeek ☑️️️
-* getWeekOfMonth ☑️️️
-* getWeeksInMonth ☑️️️
-* isAfter ☑️️️
-* isBefore ☑️️️
-* isEqual ☑️️️
-* isFriday ☑️️️
-* isLastDayOfMonth ☑️️️
-* isLeapYear ☑️️️
-* isMonday ☑️️️
-* isNumberLeapYear ☑️️️
-* isSameMonth ☑️️️
-* isSameQuarter 
-* isSameWeek 
-* isSameYear 
-* isSaturday ☑️️️
-* isSunday ☑️️️
-* isThursday ☑️️️
-* isTuesday ☑️️️
-* isValid ☑️️️
-* isWednesday ☑️️️
-* isWeekend ☑️️️
-* max ☑️️️
-* min ☑️️️
+* getDayOfYear ✓
+* getDaysInMonth ✓
+* getDaysInYear ✓
+* getEndOfMonth ✓
+* getEndOfQuarter ✓
+* getEndOfWeek ✓
+* getEndOfWeekYear ✓
+* getEndOfYear ✓
+* getQuarter ✓
+* getStartOfDecade ✓
+* getStartOfMonth ✓
+* getStartOfQuarter ✓
+* getStartOfWeek ✓
+* getStartOfWeekYear ✓
+* getStartOfYear ✓
+* getCalendarWeek ✓
+* getWeekOfMonth ✓
+* getWeeksInMonth ✓
+* isAfter ✓
+* isBefore ✓
+* isEqual ✓
+* isFriday ✓
+* isLastDayOfMonth ✓
+* isLeapYear ✓
+* isMonday ✓
+* isNumberLeapYear ✓
+* isSameMonth ✓
+* isSameQuarter ✓
+* isSameWeek ✓
+* isSameYear ✓
+* isSaturday ✓
+* isSunday ✓
+* isThursday ✓
+* isTuesday ✓
+* isValid ✓
+* isWednesday ✓
+* isWeekend ✓
+* max ✓
+* min ✓
 
 ### Parsers
 * parse
