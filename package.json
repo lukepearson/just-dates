@@ -20,7 +20,6 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
-    "create-ts-index": "^1.13.5",
     "enzyme": "^3.10.3",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -40,7 +39,7 @@
     "typescript": "^3.9.5"
   },
   "scripts": {
-    "build": "yarn cti create ./src -i '*.test.ts' && tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json",
     "test": "TZ=Japan nyc --reporter=html --reporter=text mocha",
     "coverage": "open ./coverage/index.html",
     "test:watch": "mocha --watch --watch-files --growl 'src/**/*.ts",
