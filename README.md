@@ -102,8 +102,7 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * isBefore ☑️️️
 * isEqual ☑️️️
 * isFriday ☑️️️
-* isIn 
-* isLastDayOfMonth 
+* isLastDayOfMonth ☑️️️
 * isLeapYear ☑️️️
 * isMonday ☑️️️
 * isNumberLeapYear ☑️️️
