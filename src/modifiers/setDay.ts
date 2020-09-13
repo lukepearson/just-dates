@@ -3,7 +3,7 @@ import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
 
 /**
- * Sets the day of a DateObject, returns a new DateObject
+ * Sets the day of the month for a DateObject, returns a new DateObject
  * @example
  * setDay({ year: 2020, month: 2, day: 1 }, 2);
  * // { year: 2020, month: 2, day: 2 }

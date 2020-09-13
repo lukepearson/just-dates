@@ -5,8 +5,8 @@ import { checkArgs } from '../internal/checkArgs';
 /**
  * Subtracts months from a DateObject, returns a new DateObject
  * @example
- * subDays({ year: 2020, month: 2, day: 20 }, 2);
- * // { year: 2019, month: 12, day: 20 }
+ * subMonths({ year: 2020, month: 2, day: 20 }, 1);
+ * // { year: 2020, month: 1, day: 20 }
  */
 export const subMonths = (date: DateObject, months: number): DateObject => {
   checkArgs(date, 'date');

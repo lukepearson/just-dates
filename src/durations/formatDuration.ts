@@ -6,7 +6,7 @@ const s = (num: number) => (num === 1 ? '' : 's');
 /**
  * Formats a duration to a human readable string
  * @example
- * formatDistance({ year: 2020, month: 2, day: 3 }, { year: 2023, month: 11, day: 21 })
+ * formatDuration({ year: 2020, month: 2, day: 3 }, { year: 2023, month: 11, day: 21 })
  * // '3 years, 9 months and 18 days'
  */
 export const formatDuration = (duration: Duration): string => {

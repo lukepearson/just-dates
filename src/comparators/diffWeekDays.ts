@@ -6,7 +6,7 @@ import { isBefore } from './isBefore';
 import { isWeekend } from '../queries/isWeekend';
 
 /**
- * Returns the number of quarters between two dates
+ * Returns the number of weekdays between two dates
  * @example
  * diffWeekDays({ year: 2020, month: 8, day: 1 }, { year: 2021, month: 2, day: 10 })
  * // 2

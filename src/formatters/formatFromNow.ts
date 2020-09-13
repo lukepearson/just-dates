@@ -21,7 +21,7 @@ import { localToday } from '../generators/localToday';
 const getDay = (day: DayOfWeek): string => {
   const stringDay = {
     [MONDAY]: 'Monday',
-    [TUESDAY]: 'Tuesay',
+    [TUESDAY]: 'Tuesday',
     [WEDNESDAY]: 'Wednesday',
     [THURSDAY]: 'Thursday',
     [FRIDAY]: 'Friday',

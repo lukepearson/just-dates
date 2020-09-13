@@ -2,6 +2,12 @@ import { DateObject } from '../dateObject';
 import { DateFormat } from '../parsers/parseDate';
 import { checkArgs } from '../internal/checkArgs';
 
+/**
+ * Outputs a DateObject in the specified format
+ * @example
+ * format({ year: 2020, month: 2, day: 3 }, 'y-m-d')
+ * // '2020-02-03'
+ */
 export const format = (date: DateObject, format: DateFormat = 'Y-M-D'): string => {
   checkArgs(date, 'date');
   const { year, month, day } = date;

@@ -3,7 +3,7 @@ import { isBefore } from '../comparators/isBefore';
 import { addDays } from '../modifiers/addDays';
 
 /**
- * Generates the full month from a given year/month
+ * Generates an inclusive date range between two DateObjects
  * @example
  * generateRange({ year: 2020, month: 4, day: 29 }, { year: 2020, month: 5, day: 2 })
  * // [{ year: 2020, month: 4, day: 29 }, { year: 2020, month: 4, day: 30 }, ...]
