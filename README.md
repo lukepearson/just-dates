@@ -36,21 +36,21 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * addQuarters ✓
 * addWeekDays ✓
 * addWeeks ✓
-* addYears ☑️️
-* set ☑️️
-* setDay ☑️️
-* setDayOfYear ☑️️
-* setDayOfWeek ☑️️
-* setMonth ☑️️
-* setQuarter ☑️️
-* setWeek ☑️️
-* setYear ☑️️
+* addYears ✓
+* set ✓
+* setDay ✓
+* setDayOfYear ✓
+* setDayOfWeek ✓
+* setMonth ✓
+* setQuarter ✓
+* setWeek ✓
+* setYear ✓
 * sub ✓
 * subDays ✓
 * subMonths ✓
-* subQuarters ☑️️
-* subWeekDays ☑️️
-* subWeeks ☑️️
+* subQuarters ✓
+* subWeekDays ✓
+* subWeeks ✓
 * subYears ✓
 
 ### Durations
@@ -61,8 +61,8 @@ console.log(`20 days from now is ${format(in20Days))}`);
 * diffDays ✓
 * diffMonths ✓
 * diffQuarters ✓
-* diffWeekDays ☑️️
-* diffWeeks ☑️️
+* diffWeekDays ✓
+* diffWeeks ✓
 * diffYears ✓
 
 ### Generators
