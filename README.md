@@ -20,12 +20,16 @@ yarn add just-dates
 ## Usage
 
 ```js
-import { DateObject, addDays, format } from 'just-dates';
+import { DateObject, addDays, format, localToday, addYears, addMonths } from 'just-dates';
 
-const dateObject: DateObject = { year: 2020, month: 06, day: 12 };
-const in20Days = addDays(dateObject, 20);
+const today: DateObject = localToday();
+const in20Days = addDays(today, 20);
+const in20Months = addMonths(today, 20);
+const in20Years = addYears(today, 20);
 
-console.log(`20 days from now is ${format(in20Days))}`);
+console.log(`20 days from now is ${format(in20Days)}`);
+console.log(`20 months from now is ${format(in20Months)}`);
+console.log(`20 years from now is ${format(in20Years)}`);
 ```
 
 ## API
