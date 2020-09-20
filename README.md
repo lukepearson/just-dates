@@ -1,8 +1,6 @@
-# Just Dates
+# Just Dates 🗓
 
-## Why?
-
-There are plenty of libraries dealing with datetimes. With just-dates you can parse/modify/query dates as plain objects without having to convert them to datetimes.
+Parse / modify / query / format / compare dates as plain objects without converting them to datetimes.
 
 API inspired by [date-fns](https://date-fns.org/)
 
@@ -125,17 +123,16 @@ console.log(`20 years from now is ${format(in20Years)}`);
 * min ✓
 
 ### Parsers
-* parse
+* parse ✓
 
 ## Terms
 * day - day of the month (1-31)
 * month - month of the year (1-12)
 * year - year number (1-????)
+* weekYear - ISO week-numbering year 
 * week - ISO week number (1-53)
 * weekDay - day of the week (1-7, starting on Monday)
 
 ## Todo
-* Add example project
-* Performance test
 * Locales
 * Allow changing first day of week

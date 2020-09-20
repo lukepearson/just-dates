@@ -1,6 +1,16 @@
 {
   "name": "just-dates",
   "version": "0.0.14",
+  "description": "parse/manipulate/format/query/compare objects as dates",
+  "keywords": [
+    "date",
+    "compare",
+    "query",
+    "validate",
+    "parse",
+    "format",
+    "objects"
+  ],
   "author": {
     "email": "pearson.luke@gmail.com",
     "name": "Luke Pearson"

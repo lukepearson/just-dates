@@ -33,6 +33,18 @@ describe('parseDate', function() {
       format: 'M-D-Y',
       expected: { year: 1, month: 1, day: 1 },
     },
+    {
+      input: '01/01/2001',
+      expected: { year: 2001, month: 1, day: 1 },
+    },
+    {
+      input: '01.01.2001',
+      expected: { year: 2001, month: 1, day: 1 },
+    },
+    {
+      input: '01 01 2001',
+      expected: { year: 2001, month: 1, day: 1 },
+    },
   ];
 
   testCases.forEach((testCase) => {
