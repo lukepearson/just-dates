@@ -34,15 +34,15 @@ describe('parseDate', function() {
       expected: { year: 1, month: 1, day: 1 },
     },
     {
-      input: '01/01/2001',
+      input: '2001/01/01',
       expected: { year: 2001, month: 1, day: 1 },
     },
     {
-      input: '01.01.2001',
+      input: '2001.01.01',
       expected: { year: 2001, month: 1, day: 1 },
     },
     {
-      input: '01 01 2001',
+      input: '2001 01 01',
       expected: { year: 2001, month: 1, day: 1 },
     },
   ];
