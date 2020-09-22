@@ -50,7 +50,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "TZ=Japan nyc --reporter=html --reporter=text mocha",
+    "test": "TZ=Japan nyc --reporter=json --reporter=text mocha",
     "coverage": "open ./coverage/index.html",
     "test:watch": "mocha --watch --watch-files --growl 'src/**/*.ts",
     "lint": "eslint --fix -c .eslintrc.js --ext .ts src/**/*.ts",
