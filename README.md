@@ -1,5 +1,8 @@
 # Just Dates 🗓
 
+[![codecov](https://codecov.io/gh/lukepearson/just-dates/branch/master/graph/badge.svg)](https://codecov.io/gh/lukepearson/just-dates)
+
+
 Parse / modify / query / format / compare dates as plain objects without converting them to datetimes.
 
 API inspired by [date-fns](https://date-fns.org/)
