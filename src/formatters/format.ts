@@ -1,5 +1,5 @@
 import { DateObject } from '../dateObject';
-import { DateFormat } from '../parsers/parseDate';
+import { DateFormat } from '../parsers/parseString';
 import { checkArgs } from '../internal/checkArgs';
 
 /**

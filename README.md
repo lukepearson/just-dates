@@ -126,7 +126,7 @@ console.log(`20 years from now is ${format(in20Years)}`);
 * min ✓
 
 ### Parsers
-* parse ✓
+* parseString ✓
 
 ## Terms
 * day - day of the month (1-31)

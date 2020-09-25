@@ -1,7 +1,7 @@
 import { format } from './format';
 import { DateObject } from '../dateObject';
 import { deepStrictEqual as eq, throws } from 'assert';
-import { DateFormat } from '../parsers/parseDate';
+import { DateFormat } from '../parsers/parseString';
 
 describe('format', function() {
   it('formats dates using the default format', function() {

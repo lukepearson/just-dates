@@ -7,7 +7,10 @@ export type LittleEndian = 'D-M-Y' | 'D/M/Y' | 'D.M.Y' | 'D M Y';
 export type MiddleEndian = 'M-D-Y' | 'M/D/Y' | 'M.D.Y' | 'M D Y';
 export type DateFormat = BigEndian | LittleEndian | MiddleEndian;
 
-export const parseDate = (dateString: string, format: DateFormat = 'Y/M/D'): DateObject | null => {
+export const parseString = (
+  dateString: string,
+  format: DateFormat = 'Y/M/D'
+): DateObject | null => {
   // Moving these regex patterns outside the function causes them to be affected by other function invocations
   // See https://i.imgur.com/uRnVE37.mp4
   const formatPattern = /([ymd])/gi;

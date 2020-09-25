@@ -57,7 +57,13 @@ export { subWeeks } from './modifiers/subWeeks';
 export { subYears } from './modifiers/subYears';
 
 // Parsers
-export { parseDate } from './parsers/parseDate';
+export {
+  parseString,
+  BigEndian,
+  LittleEndian,
+  MiddleEndian,
+  DateFormat,
+} from './parsers/parseString';
 
 // Queries
 export { getCalendarWeek } from './queries/getCalendarWeek';
