@@ -7,12 +7,16 @@ export type LittleEndian = 'D-M-Y' | 'D/M/Y' | 'D.M.Y' | 'D M Y';
 export type MiddleEndian = 'M-D-Y' | 'M/D/Y' | 'M.D.Y' | 'M D Y';
 export type DateFormat = BigEndian | LittleEndian | MiddleEndian;
 
+/**
+ * @example
+ * Parses a date string into a DateObject
+ * parseString('2020-01-01', 'Y-M-D')
+ * // { year: 2020, month: 1, day: 1 }
+ */
 export const parseString = (
   dateString: string,
   format: DateFormat = 'Y/M/D'
 ): DateObject | null => {
-  // Moving these regex patterns outside the function causes them to be affected by other function invocations
-  // See https://i.imgur.com/uRnVE37.mp4
   const formatPattern = /([ymd])/gi;
   const digitPattern = /(\d)/gi;
   const nonDigitPattern = /(\D)/gi;

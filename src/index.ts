@@ -1,4 +1,21 @@
-export { DateObject } from './dateObject';
+export {
+  Day,
+  Week,
+  Month,
+  Year,
+  Duration,
+  YearMonth,
+  DateObject,
+  DatePart,
+  DayOfWeek,
+  MONDAY,
+  TUESDAY,
+  WEDNESDAY,
+  THURSDAY,
+  FRIDAY,
+  SATURDAY,
+  SUNDAY,
+} from './dateObject';
 
 // Comparators
 export { diffCalendarWeeks } from './comparators/diffCalendarWeeks';

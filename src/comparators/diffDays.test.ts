@@ -1,5 +1,5 @@
 import { equal as eq } from 'assert';
-import { diffDays } from './diffDays';
+import { diffDays, getTotalDays } from './diffDays';
 
 describe('diffDays', function() {
   it('returns 1 for consecutive days', function() {
@@ -46,5 +46,27 @@ describe('diffDays', function() {
   it('returns days across years including a leap year', function() {
     const result = diffDays({ day: 1, month: 1, year: 2003 }, { day: 8, month: 11, year: 2006 });
     eq(result, 1407);
+  });
+
+  describe('getTotalDays', function() {
+    it('returns 1 for the first day', function() {
+      const result = getTotalDays({ day: 1, month: 1, year: 0 });
+      eq(result, 1);
+    });
+
+    it('returns 365 for the last day of the first year', function() {
+      const result = getTotalDays({ day: 31, month: 12, year: 0 });
+      eq(result, 366);
+    });
+
+    it('returns 366 for the first day of the second year', function() {
+      const result = getTotalDays({ day: 1, month: 1, year: 1 });
+      eq(result, 367);
+    });
+
+    it('returns 737791 for the 2020-01-01', function() {
+      const result = getTotalDays({ year: 2020, month: 1, day: 1 });
+      eq(result, 737791);
+    });
   });
 });

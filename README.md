@@ -35,98 +35,100 @@ console.log(`20 years from now is ${format(in20Years)}`);
 
 ## API
 ### Modifiers (returns new DateObject)
-* add ✓
-* addDays ✓
-* addMonths ✓
-* addQuarters ✓
-* addWeekDays ✓
-* addWeeks ✓
-* addYears ✓
-* set ✓
-* setDay ✓
-* setDayOfYear ✓
-* setDayOfWeek ✓
-* setMonth ✓
-* setQuarter ✓
-* setWeek ✓
-* setYear ✓
-* sub ✓
-* subDays ✓
-* subMonths ✓
-* subQuarters ✓
-* subWeekDays ✓
-* subWeeks ✓
-* subYears ✓
+* add
+* addDays
+* addMonths
+* addQuarters
+* addWeekDays
+* addWeeks
+* addYears
+* set
+* setDay
+* setDayOfYear
+* setDayOfWeek
+* setMonth
+* setQuarter
+* setWeek
+* setYear
+* sub
+* subDays
+* subMonths
+* subQuarters
+* subWeekDays
+* subWeeks
+* subYears
 
 ### Durations
-* getDuration ✓
-* formatDuration ✓
+* getDuration
+* formatDuration
 
 ### Comparators
-* diffDays ✓
-* diffMonths ✓
-* diffQuarters ✓
-* diffWeekDays ✓
-* diffWeeks ✓
-* diffYears ✓
+* diffDays
+* diffMonths
+* diffQuarters
+* diffWeekDays
+* diffWeeks
+* diffYears
 
 ### Generators
-* localToday ✓
-* UTCToday ✓
-* generateMonth ✓
-* generateRange ✓
-* generateWeek ✓
-* generateYear ✓
-* generateWeekYear ✓
+* localToday
+* UTCToday
+* generateMonth
+* generateRange
+* generateWeek
+* generateYear
+* generateWeekYear
 
 ### Formatters
-* format ✓
-* formatDistance ✓
-* formatFromNow ✓
+* format
+* formatDistance
+* formatFromNow
 
 ### Queries
-* getDayOfYear ✓
-* getDaysInMonth ✓
-* getDaysInYear ✓
-* getEndOfMonth ✓
-* getEndOfQuarter ✓
-* getEndOfWeek ✓
-* getEndOfWeekYear ✓
-* getEndOfYear ✓
-* getQuarter ✓
-* getStartOfDecade ✓
-* getStartOfMonth ✓
-* getStartOfQuarter ✓
-* getStartOfWeek ✓
-* getStartOfWeekYear ✓
-* getStartOfYear ✓
-* getCalendarWeek ✓
-* getWeekOfMonth ✓
-* getWeeksInMonth ✓
-* isAfter ✓
-* isBefore ✓
-* isEqual ✓
-* isFriday ✓
-* isLastDayOfMonth ✓
-* isLeapYear ✓
-* isMonday ✓
-* isNumberLeapYear ✓
-* isSameMonth ✓
-* isSameQuarter ✓
-* isSameWeek ✓
-* isSameYear ✓
-* isSaturday ✓
-* isSunday ✓
-* isThursday ✓
-* isTuesday ✓
-* isValid ✓
-* isWednesday ✓
-* isWeekend ✓
-* max ✓
-* min ✓
+* getDayOfYear
+* getDaysInMonth
+* getDaysInYear
+* getEndOfMonth
+* getEndOfQuarter
+* getEndOfWeek
+* getEndOfWeekYear
+* getEndOfYear
+* getQuarter
+* getStartOfDecade
+* getStartOfMonth
+* getStartOfQuarter
+* getStartOfWeek
+* getStartOfWeekYear
+* getStartOfYear
+* getCalendarWeek
+* getTotalDays
+* getWeekOfMonth
+* getWeeksInMonth
+* isAfter
+* isBefore
+* isEqual
+* isFriday
+* isLastDayOfMonth
+* isLeapYear
+* isMonday
+* isNumberLeapYear
+* isSameMonth
+* isSameQuarter
+* isSameWeek
+* isSameYear
+* isSaturday
+* isSunday
+* isThursday
+* isTuesday
+* isValid
+* isWednesday
+* isWeekend
+* max
+* min
 
 ### Parsers
-* parseString ✓
+* parseString
+* parseDate
 
 ## Terms
 * day - day of the month (1-31)
