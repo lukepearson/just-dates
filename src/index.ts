@@ -81,6 +81,7 @@ export {
   MiddleEndian,
   DateFormat,
 } from './parsers/parseString';
+export { parseDate } from './parsers/parseDate';
 
 // Queries
 export { getCalendarWeek } from './queries/getCalendarWeek';
