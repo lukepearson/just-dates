@@ -21,7 +21,9 @@ yarn add just-dates
 ## Usage
 
 ```js
-import { DateObject, addDays, format, localToday, addYears, addMonths } from 'just-dates';
+import { 
+  DateObject, addDays, format, localToday, addYears, addMonths, getStartOfWeekYear 
+} from 'just-dates';
 
 const today: DateObject = localToday();
 const in20Days = addDays(today, 20);
