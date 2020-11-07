@@ -102,8 +102,8 @@ describe('formatFromNow', function() {
     {
       date: { year: 2020, month: 11, day: 31 },
       now: { year: 2020, month: 1, day: 1 },
-      expected: 'In ten months',
-      past: 'Ten months ago',
+      expected: 'In eleven months',
+      past: 'Eleven months ago',
     },
     {
       date: { year: 2021, month: 1, day: 1 },

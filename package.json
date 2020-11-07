@@ -50,9 +50,10 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "TZ=Japan nyc --reporter=json --reporter=text mocha",
+    "test": "TZ=Japan mocha",
+    "test:coverage": "TZ=Japan nyc --reporter=json --reporter=text mocha",
     "coverage": "open ./coverage/index.html",
-    "test:watch": "mocha --watch --watch-files --growl 'src/**/*.ts",
+    "test:watch": "mocha --watch --watch-files 'src/**/*.ts",
     "lint": "eslint --fix -c .eslintrc.js --ext .ts src/**/*.ts",
     "clean": "rimraf ./lib",
     "prebuild": "yarn clean && yarn lint && yarn test --coverage"
@@ -62,5 +63,6 @@
   ],
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
-  "main": "lib/index.js"
+  "main": "lib/index.js",
+  "dependencies": {}
 }

@@ -1,6 +1,8 @@
 import { DateObject } from '../dateObject';
-import { diffYears } from './diffYears';
-import { isAfter } from './isAfter';
+import { isBefore } from './isBefore';
+import { diffDays } from './diffDays';
+import { addMonths } from '../modifiers/addMonths';
+import { getDaysInMonth } from '../queries/getDaysInMonth';
 
 /**
  * Returns the number of full months between two dates
@@ -9,7 +11,17 @@ import { isAfter } from './isAfter';
  * // 6
  */
 export const diffMonths = (a: DateObject, b: DateObject): number => {
-  const [_a, _b] = isAfter(a, b) ? [a, b] : [b, a];
-  const years = diffYears(_a, _b);
-  return Math.abs(_a.month - _b.month + years * 12);
+  const [_a, _b] = isBefore(a, b) ? [a, b] : [b, a];
+  let months = 0;
+  let newA = { ..._a };
+  while (isBefore(newA, _b)) {
+    newA = addMonths(newA, 1);
+    months += 1;
+  }
+  let daysOver = diffDays(newA, _b);
+  console.log(daysOver);
+  if (daysOver && daysOver < getDaysInMonth(_b)) {
+    months -= 1;
+  }
+  return months;
 };

@@ -1,19 +1,28 @@
+import { addYears } from '../modifiers/addYears';
 import { DateObject } from '../dateObject';
 import { getCalendarWeek } from '../queries/getCalendarWeek';
-import { diffYears } from './diffYears';
 import { isBefore } from './isBefore';
+import { getCalendarWeeksInYear } from '../queries/getCalendarWeeksInYear';
+import { getCalendarYear } from '../queries/getCalendarYear';
 
 /**
- * Returns the number of calendar between two dates
+ * Returns the number of calendar weeks between two dates
  * @example
  * diffCalendarWeeks({ year: 2020, month: 1, day: 3 }, { year: 2020, month: 1, day: 7 })
  * // 1
  */
 export const diffCalendarWeeks = (a: DateObject, b: DateObject): number => {
   const [_a, _b] = isBefore(a, b) ? [a, b] : [b, a];
-  if (_a.year === _b.year) {
-    return Math.abs(getCalendarWeek(_b) - getCalendarWeek(_a));
+  const remainingWeeks = getCalendarWeeksInYear(_a.year) - getCalendarWeek(_a);
+  if (getCalendarYear(_a) == getCalendarYear(_b)) {
+    return getCalendarWeek(_b) - getCalendarWeek(_a);
   }
-  const remainingWeeks = 52 - getCalendarWeek(_a);
-  return (diffYears(_a, _b) - 1) * 52 + remainingWeeks + getCalendarWeek(_b);
+  const bWeeks = getCalendarWeek(_b);
+  let interimWeeks = 0;
+  let newA = addYears(_a, 1);
+  while (getCalendarYear(newA) < getCalendarYear(_b)) {
+    interimWeeks += getCalendarWeeksInYear(newA.year);
+    newA = addYears(newA, 1);
+  }
+  return remainingWeeks + interimWeeks + bWeeks;
 };

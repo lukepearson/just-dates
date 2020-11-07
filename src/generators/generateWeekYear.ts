@@ -10,7 +10,7 @@ import { getEndOfWeekYear } from '../queries/getEndOfWeekYear';
  * // [{ year: 2019, month: 12, day: 30 }, ... { year: 2021, month: 3, day: 1 }, ...]
  */
 export const generateWeekYear = (year: number): DateObject[] => {
-  const startOfYear = getStartOfWeekYear({ year, month: 1, day: 1 });
-  const endOfYear = getEndOfWeekYear({ year, month: 12, day: 31 });
+  const startOfYear = getStartOfWeekYear({ year, month: 6, day: 1 });
+  const endOfYear = getEndOfWeekYear({ year, month: 6, day: 1 });
   return generateRange(startOfYear, endOfYear);
 };

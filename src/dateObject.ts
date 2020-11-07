@@ -25,6 +25,7 @@ export type YearMonth = Year & Month;
 export type DateObject = Day & Month & Year;
 export type DatePart = Day | Month | Year;
 export type DayOfWeek = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+export type MonthOfYear = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 export const MONDAY: DayOfWeek = 1;
 export const TUESDAY: DayOfWeek = 2;
@@ -33,3 +34,16 @@ export const THURSDAY: DayOfWeek = 4;
 export const FRIDAY: DayOfWeek = 5;
 export const SATURDAY: DayOfWeek = 6;
 export const SUNDAY: DayOfWeek = 7;
+
+export const JANUARY: MonthOfYear = 1;
+export const FEBRUARY: MonthOfYear = 2;
+export const MARCH: MonthOfYear = 3;
+export const APRIL: MonthOfYear = 4;
+export const MAY: MonthOfYear = 5;
+export const JUNE: MonthOfYear = 6;
+export const JULY: MonthOfYear = 7;
+export const AUGUST: MonthOfYear = 8 ;
+export const SEPTEMBER: MonthOfYear = 9;
+export const OCTOBER: MonthOfYear = 10;
+export const NOVEMBER: MonthOfYear = 11;
+export const DECEMBER: MonthOfYear = 12;

@@ -9,6 +9,10 @@ describe('getCalendarWeek', function() {
       expected: 1,
     },
     {
+      input: { year: 2019, month: 12, day: 30 },
+      expected: 1,
+    },
+    {
       input: { year: 2020, month: 2, day: 17 },
       expected: 8,
     },
@@ -29,6 +33,18 @@ describe('getCalendarWeek', function() {
       expected: 34,
     },
     {
+      input: { year: 2019, month: 5, day: 1 },
+      expected: 18,
+    },
+    {
+      input: { year: 2020, month: 5, day: 1 },
+      expected: 18,
+    },
+    {
+      input: { year: 2016, month: 1, day: 1 },
+      expected: 53,
+    },
+    {
       input: { year: 2016, month: 5, day: 1 },
       expected: 17,
     },
@@ -43,6 +59,18 @@ describe('getCalendarWeek', function() {
     {
       input: { year: 2010, month: 6, day: 9 },
       expected: 23,
+    },
+    {
+      input: { year: 2017, month: 1, day: 1 },
+      expected: 52,
+    },
+    {
+      input: { year: 2017, month: 12, day: 25 },
+      expected: 52,
+    },
+    {
+      input: { year: 2016, month: 12, day: 26 },
+      expected: 52,
     },
   ].forEach(({ input, expected }) => {
     it(`${format(input)} == week number ${expected}`, function() {

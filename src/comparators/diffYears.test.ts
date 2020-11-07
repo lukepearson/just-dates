@@ -19,9 +19,14 @@ describe('diffYears', function() {
       b: { year: 1970, month: 1, day: 31 },
       expected: 10,
     },
+    {
+      a: { year: 1900, month: 12, day: 31 },
+      b: { year: 1901, month: 1, day: 1 },
+      expected: 0,
+    },
   ].forEach(({ a, b, expected }) => {
     it(`${format(a)} - ${format(b)} == ${expected}`, function() {
-      eq(diffYears(a, b), expected);
+      eq(expected, diffYears(a, b));
     });
   });
 });

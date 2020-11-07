@@ -41,7 +41,7 @@ describe('getDuration', function() {
       expected: { years: 0, months: 11, days: 30 },
     },
   ].forEach(({ a, b, expected }) => {
-    it(`${format(a)} - ${format(b)} == ${formatDuration(expected)} months`, function() {
+    it(`${format(a)} - ${format(b)} == ${formatDuration(expected)}`, function() {
       eq(getDuration(a, b), expected);
     });
   });

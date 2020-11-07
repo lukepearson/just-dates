@@ -9,5 +9,7 @@ describe('getDayOfYear', function() {
     eq(getDayOfYear({ month: 8, year: 2020, day: 3 }), 216);
     eq(getDayOfYear({ month: 8, year: 2020, day: 10 }), 223);
     eq(getDayOfYear({ month: 8, year: 2020, day: 17 }), 230);
+    eq(getDayOfYear({ month: 5, year: 2020, day: 1 }), 122);
+    eq(getDayOfYear({ month: 5, year: 2019, day: 1 }), 121);
   });
 });

@@ -19,9 +19,14 @@ describe('formatDistance', function() {
       expected: '1 day',
     },
     {
-      a: { year: 2020, month: 3, day: 31 },
+      a: { year: 2020, month: 3, day: 30 },
       b: { year: 2020, month: 4, day: 30 },
-      expected: '30 days',
+      expected: '1 month',
+    },
+    {
+      a: { year: 2020, month: 3, day: 30 },
+      b: { year: 2020, month: 4, day: 31 },
+      expected: '1 month and 1 day',
     },
     {
       a: { year: 2020, month: 4, day: 1 },

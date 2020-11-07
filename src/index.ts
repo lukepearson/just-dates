@@ -85,7 +85,9 @@ export { parseDate } from './parsers/parseDate';
 
 // Queries
 export { getCalendarWeek } from './queries/getCalendarWeek';
+export { getCalendarYear } from './queries/getCalendarYear';
 export { getCalendarWeeksInMonth } from './queries/getCalendarWeeksInMonth';
+export { getCalendarWeeksInYear } from './queries/getCalendarWeeksInYear';
 export { getDayOfWeek } from './queries/getDayOfWeek';
 export { getDayOfYear } from './queries/getDayOfYear';
 export { getDaysInMonth } from './queries/getDaysInMonth';

@@ -1,5 +1,6 @@
 import { DateObject } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
+import { diffDays } from './diffDays';
 
 /**
  * Returns the number of full years between two dates
@@ -10,5 +11,5 @@ import { checkArgs } from '../internal/checkArgs';
 export const diffYears = (a: DateObject, b: DateObject): number => {
   checkArgs(a, 'a');
   checkArgs(b, 'b');
-  return Math.abs(a.year - b.year);
+  return Math.floor(diffDays(a, b) / 365);
 };

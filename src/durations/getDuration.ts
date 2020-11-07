@@ -1,8 +1,10 @@
 import { DateObject, Duration } from '../dateObject';
-import { isAfter } from '../comparators/isAfter';
-import { getDaysInMonth } from '../queries/getDaysInMonth';
+import { isBefore } from '../comparators/isBefore';
 import { diffYears } from '../comparators/diffYears';
+import { addMonths } from '../modifiers/addMonths';
 import { addYears } from '../modifiers/addYears';
+import { diffDays } from '../comparators/diffDays';
+import { isAfter } from '../comparators/isAfter';
 import { subMonths } from '../modifiers/subMonths';
 
 /**
@@ -10,22 +12,30 @@ import { subMonths } from '../modifiers/subMonths';
  * @example
  * getDuration({ year: 2020, month: 8, day: 20 }, { year: 2026, month: 1, day: 10 })
  * // { years: 5, months: 4, days: 21 }
+ *
+ * getDuration({ year: 2020, month: 12, day: 31 }, { year: 2021, month: 1, day: 1 })
+ * // { years: 0, months: 0, days: 1 }
  */
 export const getDuration = (a: DateObject, b: DateObject): Duration => {
-  const [_a, _b] = isAfter(a, b) ? [b, a] : [a, b];
-  let years = diffYears(_a, _b);
-  let newDate = addYears(_a, years);
-  let months = _b.month - _a.month;
-  let days = _b.day - _a.day;
-  if (days < 0) {
-    days += getDaysInMonth(newDate);
-    subMonths(newDate, 1);
-    months--;
+  const [_a, _b] = isBefore(a, b) ? [a, b] : [b, a];
+  let newA = { ..._a };
+  let diff = { years: 0, months: 0, days: 0 };
+  while (diffYears(newA, _b)) {
+    diff.years += 1;
+    newA = addYears(newA, 1);
   }
-  if (months < 0 && years > 0) {
-    months += 12;
-    newDate.year--;
-    years--;
+  while (isBefore(newA, _b)) {
+    diff.months += 1;
+    newA = addMonths(newA, 1);
   }
-  return { years, months, days };
+  if (isAfter(newA, _b)) {
+    diff.months -= 1;
+    newA = subMonths(newA, 1);
+  }
+  if (diff.months < 0) {
+    diff.months += 12;
+    diff.years -= 1;
+  }
+  diff.days = diffDays(newA, _b);
+  return diff;
 };

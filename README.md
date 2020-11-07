@@ -31,6 +31,7 @@ const in20Years = addYears(today, 20);
 console.log(`20 days from now is ${format(in20Days)}`);
 console.log(`20 months from now is ${format(in20Months)}`);
 console.log(`20 years from now is ${format(in20Years)}`);
+console.log(`The start of the calendar year is ${getStartOfWeekYear(today)}`);
 ```
 
 ## API
@@ -58,7 +59,7 @@ console.log(`20 years from now is ${format(in20Years)}`);
 * subWeeks
 * subYears
 
-### Durations
+### Durations
 * getDuration
 * formatDuration
 
@@ -101,6 +102,8 @@ console.log(`20 years from now is ${format(in20Years)}`);
 * getStartOfWeekYear
 * getStartOfYear
 * getCalendarWeek
+* getCalendarWeeksInYear
+* getCalendarYear
 * getTotalDays
 * getWeekOfMonth
 * getWeeksInMonth

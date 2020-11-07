@@ -6,8 +6,23 @@ describe('diffCalendarWeeks', function() {
   [
     {
       a: { year: 2015, month: 12, day: 28 },
+      b: { year: 2016, month: 1, day: 1 },
+      expected: 0,
+    },
+    {
+      a: { year: 2015, month: 12, day: 27 },
+      b: { year: 2016, month: 1, day: 1 },
+      expected: 1,
+    },
+    {
+      a: { year: 2015, month: 12, day: 29 },
+      b: { year: 2016, month: 1, day: 4 },
+      expected: 1,
+    },
+    {
+      a: { year: 2015, month: 12, day: 28 },
       b: { year: 2016, month: 5, day: 2 },
-      expected: 17,
+      expected: 18,
     },
     {
       a: { day: 3, month: 1, year: 2020 },

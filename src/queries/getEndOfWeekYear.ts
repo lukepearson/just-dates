@@ -1,3 +1,5 @@
+import { isBefore } from '../comparators/isBefore';
+import { addYears } from '../modifiers/addYears';
 import { DateObject, SUNDAY } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { set } from '../modifiers/set';
@@ -18,6 +20,9 @@ import { setDayOfWeek } from '../modifiers/setDayOfWeek';
  */
 export const getEndOfWeekYear = (date: DateObject): DateObject => {
   checkArgs(date, 'date');
-  const endOfYear = set(date, { month: 12, day: 28 });
+  let endOfYear = set(date, { month: 12, day: 28 });
+  if (isBefore(endOfYear, date)) {
+    endOfYear = set(addYears(date, 1), { month: 12, day: 28 });
+  }
   return setDayOfWeek(endOfYear, SUNDAY);
 };
