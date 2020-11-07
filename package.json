@@ -51,7 +51,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "TZ=Japan mocha",
-    "test:coverage": "TZ=Japan nyc --reporter=json --reporter=text mocha",
+    "test:coverage": "TZ=Japan nyc --reporter=json --reporter=text --reporter=html mocha",
     "coverage": "open ./coverage/index.html",
     "test:watch": "mocha --watch --watch-files 'src/**/*.ts",
     "lint": "eslint --fix -c .eslintrc.js --ext .ts src/**/*.ts",
@@ -63,6 +63,5 @@
   ],
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
-  "main": "lib/index.js",
-  "dependencies": {}
+  "main": "lib/index.js"
 }
