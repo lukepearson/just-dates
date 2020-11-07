@@ -1,6 +1,6 @@
 {
   "name": "just-dates",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "parse/manipulate/format/query/compare objects as dates",
   "keywords": [
     "date",
