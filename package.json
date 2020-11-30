@@ -2,6 +2,10 @@
   "name": "just-dates",
   "version": "0.0.22",
   "description": "parse/manipulate/format/query/compare objects as dates",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukepearson/just-dates.git"
+  },
   "keywords": [
     "date",
     "compare",
