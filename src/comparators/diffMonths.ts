@@ -19,7 +19,6 @@ export const diffMonths = (a: DateObject, b: DateObject): number => {
     months += 1;
   }
   let daysOver = diffDays(newA, _b);
-  console.log(daysOver);
   if (daysOver && daysOver < getDaysInMonth(_b)) {
     months -= 1;
   }
