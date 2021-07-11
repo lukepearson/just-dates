@@ -1,4 +1,5 @@
-import { DateObject } from '../dateObject';
+import { stringToNumber } from '../internal/stringToNumber';
+import { Comparator, DateObject } from '../dateObject';
 import { isAfter } from './isAfter';
 
 /**
@@ -7,4 +8,7 @@ import { isAfter } from './isAfter';
  * min({ year: 2100, month: 1, day: 1 }, { year: 2000, month: 1, day: 1 })
  * // { year: 2000, month: 1, day: 1 }
  */
-export const min = (a: DateObject, b: DateObject): DateObject => (isAfter(a, b) ? b : a);
+export const min: Comparator<DateObject> = (a, b) => {
+  [a, b] = stringToNumber([a, b]);
+  return isAfter(a, b) ? b : a;
+};

@@ -1,4 +1,5 @@
-import { DateObject } from '../dateObject';
+import { stringToNumber } from '../internal/stringToNumber';
+import { Query } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 
 /**
@@ -14,7 +15,8 @@ export const isNumberLeapYear = (year: number): boolean =>
  * @example isLeapYear({ year: 2020, month: 1, day: 6 })
  * // true
  */
-export const isLeapYear = (date: DateObject): boolean => {
+export const isLeapYear: Query<boolean> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   return isNumberLeapYear(date.year);
 };

@@ -36,8 +36,8 @@ describe('getDuration', function() {
       expected: { years: 0, months: 0, days: 0 },
     },
     {
-      a: { year: 2026, month: 1, day: 1 },
-      b: { year: 2026, month: 12, day: 31 },
+      a: { year: '2026', month: '1', day: '1' },
+      b: { year: '2026', month: '12', day: '31' },
       expected: { years: 0, months: 11, days: 30 },
     },
   ].forEach(({ a, b, expected }) => {

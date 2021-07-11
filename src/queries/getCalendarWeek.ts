@@ -1,9 +1,10 @@
 import { subWeeks } from '../modifiers/subWeeks';
-import { DateObject } from '../dateObject';
+import { Query } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { getDayOfWeek } from './getDayOfWeek';
 import { getDayOfYear } from './getDayOfYear';
 import { getCalendarWeeksInYear } from './getCalendarWeeksInYear';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns the ISO calendar week as a number for the week-year containing the given date
@@ -11,7 +12,8 @@ import { getCalendarWeeksInYear } from './getCalendarWeeksInYear';
  * // 16
  * https://en.wikipedia.org/wiki/ISO_week_date
  */
-export const getCalendarWeek = (date: DateObject): number => {
+export const getCalendarWeek: Query<number> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   const ordinal = getDayOfYear(date);
   const weekNumber = Math.floor((ordinal - getDayOfWeek(date) + 10) / 7);

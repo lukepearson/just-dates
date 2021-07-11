@@ -1,6 +1,7 @@
 import { isNumberLeapYear } from './isLeapYear';
-import { YearMonth, DateObject } from '../dateObject';
+import { YearMonth, DateObject, StringDateObject } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns the number of days in a given DateObject, or YearMonth
@@ -10,7 +11,8 @@ import { checkArgs } from '../internal/checkArgs';
  * @example getDaysInMonth({ year: 2020, month: 2 })
  * // 29
  */
-export const getDaysInMonth = (date: YearMonth | DateObject): number => {
+export const getDaysInMonth = (date: YearMonth | DateObject | StringDateObject): number => {
+  [date] = stringToNumber([{ day: 1, ...date }]);
   checkArgs(date, 'date');
   let { year, month } = date;
   while (month < 1) {

@@ -1,4 +1,5 @@
-import { DateObject } from '../dateObject';
+import { stringToNumber } from '../internal/stringToNumber';
+import { Query } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 
 /**
@@ -6,7 +7,8 @@ import { checkArgs } from '../internal/checkArgs';
  * @example getQuarter({ year: 2020, month: 8, day: 23 })
  * // 3
  */
-export const getQuarter = (date: DateObject): number => {
+export const getQuarter: Query<number> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   return Math.ceil(date.month / 3);
 };

@@ -1,9 +1,10 @@
-import { DateObject } from '../dateObject';
+import { DateObject, StringDateObject } from '../dateObject';
 import { addDays } from './addDays';
 import { checkArgs } from '../internal/checkArgs';
 import { isSaturday } from '../queries/isSaturday';
 import { isSunday } from '../queries/isSunday';
 import { addWeeks } from './addWeeks';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Adds week days to a DateObject, returns a new DateObject
@@ -11,7 +12,8 @@ import { addWeeks } from './addWeeks';
  * addWeekDays({ year: 2020, month: 1, day: 11 }, 5);
  * // { year: 2020, month: 1, day:  }
  */
-export const addWeekDays = (date: DateObject, weekDays: number): DateObject => {
+export const addWeekDays = (date: DateObject | StringDateObject, weekDays: number): DateObject => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   checkArgs(weekDays, 'weekDays');
   const isNegative = weekDays < 0;

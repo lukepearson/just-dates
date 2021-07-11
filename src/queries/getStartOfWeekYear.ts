@@ -1,4 +1,4 @@
-import { DateObject, FRIDAY, MONDAY } from '../dateObject';
+import { DateObject, FRIDAY, MONDAY, Query } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { setDayOfYear } from '../modifiers/setDayOfYear';
 import { getDayOfWeek } from './getDayOfWeek';
@@ -7,6 +7,7 @@ import { getCalendarWeek } from './getCalendarWeek';
 import { getCalendarWeeksInYear } from './getCalendarWeeksInYear';
 import { subWeeks } from '../modifiers/subWeeks';
 import { addWeeks } from '../modifiers/addWeeks';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns the start of the weekYear for the given DateObject
@@ -19,7 +20,8 @@ import { addWeeks } from '../modifiers/addWeeks';
  * If it is on a Saturday, it is part of the last week of the previous year which is numbered W52 in a common year and W53 in a leap year.
  * If it is on a Sunday, it is part of W52 of the previous year.
  */
-export const getStartOfWeekYear = (date: DateObject): DateObject => {
+export const getStartOfWeekYear: Query<DateObject> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   const weekNum = getCalendarWeek(date);
   const maxWeekNum = getCalendarWeeksInYear(date.year);

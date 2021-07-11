@@ -1,9 +1,10 @@
 import { isBefore } from '../comparators/isBefore';
 import { addYears } from '../modifiers/addYears';
-import { DateObject, SUNDAY } from '../dateObject';
+import { DateObject, Query, SUNDAY } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { set } from '../modifiers/set';
 import { setDayOfWeek } from '../modifiers/setDayOfWeek';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns the end of the weekYear for the given DateObject
@@ -18,7 +19,8 @@ import { setDayOfWeek } from '../modifiers/setDayOfWeek';
  * @example getEndOfWeekYear({ year: 2020, month: 8, day: 23 })
  * // { year: 2019, month: 12, day: 30 }
  */
-export const getEndOfWeekYear = (date: DateObject): DateObject => {
+export const getEndOfWeekYear: Query<DateObject> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   let endOfYear = set(date, { month: 12, day: 28 });
   if (isBefore(endOfYear, date)) {

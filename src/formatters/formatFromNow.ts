@@ -8,6 +8,7 @@ import {
   SATURDAY,
   SUNDAY,
   DayOfWeek,
+  StringDateObject,
 } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { getDuration } from '../durations/getDuration';
@@ -17,6 +18,7 @@ import { getDayOfWeek } from '../queries/getDayOfWeek';
 import { diffDays } from '../comparators/diffDays';
 import { getCalendarWeek } from '../queries/getCalendarWeek';
 import { localToday } from '../generators/localToday';
+import { stringToNumber } from '../internal/stringToNumber';
 
 const getDay = (day: DayOfWeek): string => {
   const stringDay = {
@@ -63,7 +65,11 @@ const num = (num: number): string => {
  * formatFromNow({ year: 1900, month: 1, day: 1 }, { year: 2000, month: 1, day: 6 })
  * // 'next Friday'
  */
-export const formatFromNow = (date: DateObject, now: DateObject = localToday()): string => {
+export const formatFromNow = (
+  date: DateObject | StringDateObject,
+  now: DateObject = localToday()
+): string => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   checkArgs(now, 'now');
   const isFuture = isBefore(now, date);

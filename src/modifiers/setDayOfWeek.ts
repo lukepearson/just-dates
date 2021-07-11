@@ -1,4 +1,5 @@
-import { DateObject, DayOfWeek } from '../dateObject';
+import { stringToNumber } from '../internal/stringToNumber';
+import { DateObject, DayOfWeek, StringDateObject } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { getDayOfWeek } from '../queries/getDayOfWeek';
 import { addDays } from './addDays';
@@ -9,7 +10,8 @@ import { addDays } from './addDays';
  * setDay({ year: 2020, month: 2, day: 1 }, 1);
  * // { year: 2020, month: 2, day: 2 }
  */
-export const setDayOfWeek = (date: DateObject, day: DayOfWeek): DateObject => {
+export const setDayOfWeek = (date: DateObject | StringDateObject, day: DayOfWeek): DateObject => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   checkArgs(day, 'day');
   const dayOfWeek = getDayOfWeek(date);

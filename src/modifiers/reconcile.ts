@@ -1,7 +1,8 @@
-import { DateObject } from '../dateObject';
+import { DateObject, StringDateObject } from '../dateObject';
 import { getDaysInMonth } from '../queries/getDaysInMonth';
 import { isValid } from '../queries/isValid';
 import { checkArgs } from '../internal/checkArgs';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns a valid date by sorting into the right units.
@@ -10,7 +11,8 @@ import { checkArgs } from '../internal/checkArgs';
  * @example reconcile({ year: 2000, month: -2: day: 32 })
  * // { year: 2001, month: 1: day: 1 }
  */
-export const reconcile = (date: DateObject): DateObject => {
+export const reconcile = (date: DateObject | StringDateObject): DateObject => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   let sortedObject = sortYearMonthDay(date);
   const { year, month, day } = sortedObject;

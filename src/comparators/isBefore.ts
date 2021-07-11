@@ -1,6 +1,7 @@
-import { DateObject } from '../dateObject';
+import { Comparator } from '../dateObject';
 import { reconcile } from '../modifiers/reconcile';
 import { checkArgs } from '../internal/checkArgs';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Checks whether the first date is before the second
@@ -8,7 +9,8 @@ import { checkArgs } from '../internal/checkArgs';
  * isBefore({ year: 1900, month: 1, day: 1 }, { year: 2000, month: 1, day: 1})
  * // true
  */
-export const isBefore = (a: DateObject, b: DateObject): boolean => {
+export const isBefore: Comparator<boolean> = (a, b) => {
+  [a, b] = stringToNumber([a, b]);
   checkArgs(a, 'a');
   checkArgs(b, 'b');
   const _a = reconcile(a);

@@ -1,6 +1,7 @@
-import { DateObject } from '../dateObject';
+import { DateObject, StringDateObject } from '../dateObject';
 import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Adds days to a DateObject, returns a new DateObject
@@ -8,7 +9,8 @@ import { checkArgs } from '../internal/checkArgs';
  * addDays({ year: 2020, month: 1, day: 1 }, 2);
  * // {{ year: 2020, month: 1, day: 3 }}
  */
-export const addDays = (date: DateObject, days: number): DateObject => {
+export const addDays = (date: DateObject | StringDateObject, days: number): DateObject => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   checkArgs(days, 'days');
   const { year, month, day } = date;

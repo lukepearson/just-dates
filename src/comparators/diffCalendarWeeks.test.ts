@@ -54,6 +54,11 @@ describe('diffCalendarWeeks', function() {
       b: { day: 8, month: 3, year: 2020 },
       expected: 1019,
     },
+    {
+      a: { day: '20', month: '8', year: '2000' },
+      b: { day: '8', month: '3', year: '2020' },
+      expected: 1019,
+    },
   ].forEach(({ a, b, expected }) => {
     it(`${format(a)} to ${format(b)} == ${expected} weeks`, function() {
       eq(diffCalendarWeeks(a, b), expected);

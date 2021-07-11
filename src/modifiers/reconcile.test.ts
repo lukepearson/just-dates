@@ -48,9 +48,9 @@ describe('reconcile', function() {
     eq(reconcile(input), expected);
   });
 
-  it('returns the original date object if the input is invalid', function() {
+  it('converts invalid strings to NaN', function() {
     const input = { day: 'fork handles', month: 62, year: 1 } as any;
-    const expected = { day: 'fork handles', month: 62, year: 1 };
+    const expected = { day: NaN, month: 62, year: 1 };
     eq(reconcile(input), expected);
   });
 

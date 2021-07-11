@@ -2,7 +2,7 @@ import { DateObject } from '../dateObject';
 
 /**
  * @example
- * Parses a native Date object into a DateObject
+ * Parses a native Date datetime object into a DateObject
  * parseDate(new Date(2020, 3, 6))
  * // { year: 2020, month: 4, day: 6 }
  */

@@ -1,9 +1,10 @@
-import { DateObject } from '../dateObject';
+import { Comparator } from '../dateObject';
 import { isAfter } from './isAfter';
 import { diffWeeks } from './diffWeeks';
 import { addDays } from '../modifiers/addDays';
 import { isBefore } from './isBefore';
 import { isWeekend } from '../queries/isWeekend';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns the number of weekdays between two dates
@@ -11,7 +12,8 @@ import { isWeekend } from '../queries/isWeekend';
  * diffWeekDays({ year: 2020, month: 8, day: 1 }, { year: 2021, month: 2, day: 10 })
  * // 2
  */
-export const diffWeekDays = (a: DateObject, b: DateObject): number => {
+export const diffWeekDays: Comparator<number> = (a, b) => {
+  [a, b] = stringToNumber([a, b]);
   const [_a, _b] = isAfter(a, b) ? [b, a] : [a, b];
   const weeks = diffWeeks(_a, _b);
   let weekDays = weeks * 5;

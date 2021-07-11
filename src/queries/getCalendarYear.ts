@@ -1,7 +1,8 @@
 import { addWeeks } from '../modifiers/addWeeks';
-import { DateObject } from '../dateObject';
+import { Query } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { getStartOfWeekYear } from './getStartOfWeekYear';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns the ISO calendar year as a number
@@ -12,7 +13,8 @@ import { getStartOfWeekYear } from './getStartOfWeekYear';
  * // 2015
  * https://en.wikipedia.org/wiki/ISO_week_date
  */
-export const getCalendarYear = (date: DateObject): number => {
+export const getCalendarYear: Query<number> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   const startOfYear = getStartOfWeekYear(date);
   return addWeeks(startOfYear, 1).year;

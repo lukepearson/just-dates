@@ -1,4 +1,5 @@
-import { DateObject, SATURDAY } from '../dateObject';
+import { stringToNumber } from '../internal/stringToNumber';
+import { Query, SATURDAY } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { getDayOfWeek } from './getDayOfWeek';
 
@@ -7,7 +8,8 @@ import { getDayOfWeek } from './getDayOfWeek';
  * @example isSaturday({ year: 1970, month: 1, day: 6 })
  * // false
  */
-export const isSaturday = (date: DateObject): boolean => {
+export const isSaturday: Query<boolean> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   return getDayOfWeek(date) === SATURDAY;
 };

@@ -1,7 +1,8 @@
-import { DateObject } from '../dateObject';
+import { Comparator, DateObject } from '../dateObject';
 import { isBefore } from './isBefore';
 import { isNumberLeapYear } from '../queries/isLeapYear';
 import { getDaysInMonth } from '../queries/getDaysInMonth';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns the number of days between two dates
@@ -9,7 +10,8 @@ import { getDaysInMonth } from '../queries/getDaysInMonth';
  * diffDays({ year: 2020, month: 1, day: 1 }, { year: 2020, month: 1, day: 10 })
  * // 9
  */
-export const diffDays = (a: DateObject, b: DateObject): number => {
+export const diffDays: Comparator<number> = (a, b) => {
+  [a, b] = stringToNumber([a, b]);
   const [_a, _b] = isBefore(a, b) ? [a, b] : [b, a];
   return Math.abs(getTotalDays(_a) - getTotalDays(_b));
 };

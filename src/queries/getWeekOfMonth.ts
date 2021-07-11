@@ -1,4 +1,5 @@
-import { DateObject } from '../dateObject';
+import { stringToNumber } from '../internal/stringToNumber';
+import { Query } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { getDayOfWeek } from './getDayOfWeek';
 import { getStartOfMonth } from './getStartOfMonth';
@@ -8,7 +9,8 @@ import { getStartOfMonth } from './getStartOfMonth';
  * @example getWeekOfMonth({ year: 2020, month: 4, day: 14 })
  * // 2
  */
-export const getWeekOfMonth = (date: DateObject): number => {
+export const getWeekOfMonth: Query<number> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   const firstDayOfMonth = getStartOfMonth(date);
   const startDay = getDayOfWeek(firstDayOfMonth);

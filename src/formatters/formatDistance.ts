@@ -1,6 +1,7 @@
-import { DateObject } from '../dateObject';
+import { DateObject, StringDateObject } from '../dateObject';
 import { getDuration } from '../durations/getDuration';
 import { formatDuration } from '../durations/formatDuration';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Returns the difference between two DateObjects as a string
@@ -11,6 +12,10 @@ import { formatDuration } from '../durations/formatDuration';
  * formatDistance({ year: 2020, month: 5, day: 3 }, { year: 2020, month: 7, day: 4 })
  * // '2 months and 1 day'
  */
-export const formatDistance = (a: DateObject, b: DateObject): string => {
+export const formatDistance = (
+  a: DateObject | StringDateObject,
+  b: DateObject | StringDateObject
+): string => {
+  [a, b] = stringToNumber([a, b]);
   return formatDuration(getDuration(a, b));
 };

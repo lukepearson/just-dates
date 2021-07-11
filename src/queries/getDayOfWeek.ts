@@ -1,6 +1,7 @@
-import { DateObject, DayOfWeek } from '../dateObject';
+import { DayOfWeek, Query } from '../dateObject';
 import { diffDays } from '../comparators/diffDays';
 import { checkArgs } from '../internal/checkArgs';
+import { stringToNumber } from '../internal/stringToNumber';
 
 const monday = { year: 1, month: 1, day: 1 };
 
@@ -13,7 +14,8 @@ const monday = { year: 1, month: 1, day: 1 };
  * @example getDayOfWeek({ year: 2020, month: 8, day: 23 })
  * // 7
  */
-export const getDayOfWeek = (date: DateObject): DayOfWeek => {
+export const getDayOfWeek: Query<DayOfWeek> = (date) => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   const diff = (diffDays(monday, date) % 7) + 1;
   return diff as DayOfWeek;

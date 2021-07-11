@@ -1,7 +1,8 @@
-import { DateObject } from '../dateObject';
+import { DateObject, StringDateObject } from '../dateObject';
 import { checkArgs } from '../internal/checkArgs';
 import { reconcile } from './reconcile';
 import { getDaysInMonth } from '../queries/getDaysInMonth';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Sets the month of a DateObject to the specified month, returns a new DateObject
@@ -10,7 +11,8 @@ import { getDaysInMonth } from '../queries/getDaysInMonth';
  * setMonth({ year: 2020, month: 1, day: 31 }, 2);
  * // { year: 2020, month: 2, day: 29 }
  */
-export const setMonth = (date: DateObject, month: number): DateObject => {
+export const setMonth = (date: DateObject | StringDateObject, month: number): DateObject => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   checkArgs(month, 'month');
   const newDate = { ...date, month: month };

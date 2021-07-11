@@ -1,6 +1,7 @@
-import { DateObject, Duration } from '../dateObject';
+import { DateObject, Duration, StringDateObject } from '../dateObject';
 import { reconcile } from './reconcile';
 import { checkArgs } from '../internal/checkArgs';
+import { stringToNumber } from '../internal/stringToNumber';
 
 /**
  * Adds a Duration to a DateObject, returns a new DateObject
@@ -14,7 +15,8 @@ import { checkArgs } from '../internal/checkArgs';
  * add({ year: 2020, month: 1, day: 1 }, { week: 2 });
  * // { year: 2020, month: 1, day: 15 }
  */
-export const add = (date: DateObject, duration: Duration): DateObject => {
+export const add = (date: DateObject | StringDateObject, duration: Duration): DateObject => {
+  [date] = stringToNumber([date]);
   checkArgs(date, 'date');
   checkArgs(duration, 'duration');
   const weekDays = (duration.weeks || 0) * 7;
