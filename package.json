@@ -67,5 +67,9 @@
   ],
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
-  "main": "lib/index.js"
+  "main": "lib/index.js",
+  "dependencies": {
+    "glob-parent": "^5.1.2",
+    "lodash": "^4.17.21"
+  }
 }
