@@ -1,6 +1,6 @@
 {
   "name": "just-dates",
-  "version": "0.0.22",
+  "version": "0.1.0",
   "description": "parse/manipulate/format/query/compare objects as dates",
   "repository": {
     "type": "git",
